@@ -9,10 +9,26 @@
     <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
-    <script type="text/javascript" src="links.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
     <script type="text/javascript" src="script/niccom.js"></script>
+    <meta property="og:title" content="PC Servis Niccom" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="https://graph.facebook.com/pc.servis.niccom" />
+    <meta property="og:image" content="https://graph.facebook.com/pc.servis.niccom/picture" />
+    <meta property="og:site_name" content="PC Servis Niccom" />
+    <meta property="fb:admins" content="100001139495518" />
 </head>
 <body role="application">
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=401636853233967";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div style="text-align: center;">
         <div id="search-engine" role="search">
             <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png"><br>
@@ -36,6 +52,7 @@
                     </div>
                     <script type="text/html" id="link-template">
                         <div class="link-group" data-bind="style:{'background-color':color}">
+                        <div class="v-line"></div>
                             <h3 data-bind="text: name"></h3>
                             <ul data-bind="foreach:links">
                                 <li>
@@ -45,6 +62,16 @@
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                    </script>
+                    <div id="fb-feed">
+                    </div>
+                    <div class="fb-like" data-href="http://www.niccom.net" data-send="true" data-width="200" data-show-faces="true"></div>
+                    <script type="text/html" id="fb-feed-template">
+                        <div class="feed-item">
+                            <a href="#" data-bind="attr:{href:url}">
+                                <h3 data-bind="text: name"></h3>
+                            </a>
                         </div>
                     </script>
                 </div>
@@ -118,7 +145,8 @@
             </div>
         </div>
         <div id="footer">
-            &copy; 2012 PC Servis
+            <div>&copy; 2012 PC Servis</div>
+
         </div>
     </div>
 </body>

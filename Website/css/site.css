@@ -35,17 +35,29 @@ div#links {
         text-align: justify;
     }
 
-div.link-group {
+        div#links > div.fb-like {
+            text-align: left;
+        }
+
+div#link-group > div.v-line {
+    width: 1px;
+    border-left: 1px solid black;
+    float: left;
+    height: 100%;
+}
+
+div.link-group, div.feed-item {
     vertical-align: top;
     display: inline-block;
     padding: 0 10px;
 }
 
+
     div.link-group > ul {
         list-style-type: none;
         padding: 0 0 0 5px;
-        width: 200px;
-        min-height: 100px;
+        width: 150px;
+        min-height: 30px;
     }
 
         div.link-group > ul > li {
