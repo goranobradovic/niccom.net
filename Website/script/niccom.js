@@ -17,7 +17,8 @@ var Niccom = (function (Niccom) {
     function GroupViewModel(data) {
         var self = this;
         self.name = data.group;
-        var links = $.map(data.links, function (item) { return new LinkViewModel(item) });
+        self.color = data.color;
+        var links = $.map(data.links || [], function (item) { return new LinkViewModel(item) });
         self.links = ko.observableArray(links);
     }
 

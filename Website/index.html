@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Copyright © Microsoft Corporation. All rights reserved. -->
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -36,12 +35,12 @@
                     <div data-bind="template: {name:'link-template', foreach:groups}">
                     </div>
                     <script type="text/html" id="link-template">
-                        <div class="link-group">
+                        <div class="link-group" data-bind="style:{'background-color':color}">
                             <h3 data-bind="text: name"></h3>
                             <ul data-bind="foreach:links">
                                 <li>
                                     <a href="#" data-bind="attr:{href:url}">
-                                        <img data-bind="attr:{src:favicon}" src="#" />
+                                        <img data-bind="attr:{src:favicon}" src="#" alt="" />
                                         <span data-bind="text:name"></span>
                                     </a>
                                 </li>
@@ -118,7 +117,9 @@
                 </div>
             </div>
         </div>
-        <br>
+        <div id="footer">
+            &copy; 2012 PC Servis
+        </div>
     </div>
 </body>
 </html>
