@@ -8,8 +8,7 @@
                 { url: "www.index.hr", name: "Index" },
                 { url: "www.dnevniavaz.ba", name: "Dnevni Avaz" },
                 { url: "www.klix.ba", name: "Klix" }
-            ],
-            color: '#FEC'
+            ]
         },
         {
             group: "Grupa 2",
@@ -17,15 +16,13 @@
                 { url: "www.nezavisne.com", name: "Nezavisne" },
                 { url: "www.jutarnji.hr", name: "Jutarnji List" },
                 { url: "www.klix.ba", name: "Klix" }
-            ],
-            color: '#CEF'
+            ]
         },
         {
             group: "Grupa 3",
             links: [
                 { url: "www.klix.ba", name: "Klix" }
-            ],
-            color: '#ECF'
+            ]
         },
         {
             group: "Grupa 4",
@@ -35,8 +32,7 @@
                 { url: "www.index.hr", name: "Index" },
                 { url: "www.dnevniavaz.ba", name: "Dnevni Avaz" },
                 { url: "www.klix.ba", name: "Klix" }
-            ],
-            color: '#FCE'
+            ]
         },
         {
             group: "Zabava",
@@ -45,8 +41,7 @@
                 { url: "www.twitter.com", name: "Twitter" },
                 { url: "plus.google.com", name: "Google plus" },
                 { url: "www.cafe.ba", name: "Cafe.ba" },
-            ],
-            color: '#CFE'
+            ]
         },
         {
             group: "Torrenti",
