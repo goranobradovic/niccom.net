@@ -54,6 +54,17 @@ var Niccom = (function (Niccom) {
         ko.applyBindings(self.LinksViewModel);
         $(window).resize(adjustWidth);
         adjustWidth();
+
+        $.getJSON("https://graph.facebook.com/pc.servis.niccom/", function (data) {
+            self.info = data;
+        });
+        $("#slides").slides({
+            pagination: false,
+            generatePagination: false,
+            play: 7500,
+            pause: 2500,
+            hoverPause: true
+        });
     };
     $(document).ready(init);
     return self;
