@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/site.css" />
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-    <title>PC Servis - Banja Luka - +387 65 696 696</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
-    <script type="text/javascript" src="script/niccom.js"></script>
-    <meta property="og:title" content="PC Servis Niccom" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="https://graph.facebook.com/pc.servis.niccom" />
-    <meta property="og:image" content="https://graph.facebook.com/pc.servis.niccom/picture" />
-    <meta property="og:site_name" content="PC Servis Niccom" />
-    <meta property="fb:admins" content="100001139495518" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/site.css" />
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <meta property="og:title" content="PC Servis Niccom" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="https://graph.facebook.com/pc.servis.niccom" />
+  <meta property="og:image" content="https://graph.facebook.com/pc.servis.niccom/picture" />
+  <meta property="og:site_name" content="PC Servis Niccom" />
+  <meta property="fb:admins" content="100001139495518" />
+  <title>PC Servis - Banja Luka - +387 65 696 696</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
+  <script type="text/javascript" src="links.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
+  <script type="text/javascript" src="script/niccom.js"></script>
 </head>
 <body role="application">
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=401636853233967";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div style="text-align: center;">
-        <div id="search-engine" role="search">
-            <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png"><br>
-            <br>
-            <form method="get" action="http://www.google.com/search">
-            <input name="q" size="61" maxlength="255" value="" type="text">
-            <br>
-            <br>
-            <input value="Google Pretraga" type="submit">
-            <br>
-            </form>
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=401636853233967";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div style="text-align: center;">
+    <div id="search-engine" role="search">
+      <div id="search-engine-google">
+        <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png"><br>
+        <br>
+        <form method="get" action="http://www.google.com/search">
+        <input name="q" size="61" maxlength="255" value="" type="text">
+        <br>
+        <br>
+        <input value="Google Pretraga" type="submit">
+        <br>
+        </form>
+      </div>
+    </div>
+    <div id="niccom-contents" role="region">
+      <div id="columnsContainer">
+        <div id="servis">
+          <img style="width: 150px; height: 134px;" alt="PC Servis" src="images/logo.jpg"><br>
+          <img style="width: 180px; height: 211px;" alt="Info" src="images/info.jpg"><br>
+          <a href="images/map.jpg"><span style="text-decoration: underline;">
+            <img style="border: 0px solid; width: 180px; height: 179px;" alt="Mapa" src="images/map-mini.jpg"></span></a><br>
+          <img style="width: 180px; height: 264px;" alt="Servis i prodaja" src="images/info2.jpg"><br>
         </div>
-        <div id="niccom-contents" role="region">
-            <div id="columnsContainer">
-                <div id="servis">
-                    <img style="width: 150px; height: 134px;" alt="PC Servis" src="images/logo.jpg"><br>
-                    <img style="width: 180px; height: 211px;" alt="Info" src="images/info.jpg"><br>
-                </div>
-                <div id="links">
-                    <div data-bind="template: {name:'link-template', foreach:groups}">
-                    </div>
-                    <script type="text/html" id="link-template">
-                        <div class="link-group" data-bind="style:{'background-color':color}">
-                        <div class="v-line"></div>
-                            <h3 data-bind="text: name"></h3>
-                            <ul data-bind="foreach:links">
-                                <li>
-                                    <a href="#" data-bind="attr:{href:url}">
-                                        <img data-bind="attr:{src:favicon}" src="#" alt="" />
-                                        <span data-bind="text:name"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </script>
-                    <div id="fb-feed">
-                    </div>
-                    <div class="fb-like" data-href="http://www.niccom.net" data-send="true" data-width="200" data-show-faces="true"></div>
-                    <script type="text/html" id="fb-feed-template">
-                        <div class="feed-item">
-                            <a href="#" data-bind="attr:{href:url}">
-                                <h3 data-bind="text: name"></h3>
-                            </a>
-                        </div>
-                    </script>
-                </div>
-                <div id="weather">
-                    <div id="wx_module_2951">
-                        <a href="http://www.weather.com/weather/local/BKXX0001">Banja Luka Weather Forecast, Bosnia And Herzegovina</a>
-                    </div>
+        <div id="links">
+          <div data-bind="template: {name:'link-template', foreach:groups}">
+          </div>
+          <script type="text/html" id="link-template">
+            <div class="link-group" data-bind="style:{'background-color':color}">
+              <div class="v-line"></div>
+              <h3 data-bind="text: name"></h3>
+              <ul data-bind="foreach:links">
+                <li>
+                  <a href="#" data-bind="attr:{href:url}">
+                    <img data-bind="attr:{src:favicon}" src="#" alt="" />
+                    <span data-bind="text:name"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </script>
+          <div id="fb-feed">
+          </div>
+          <div class="fb-like" data-href="http://www.niccom.net" data-send="true" data-width="200" data-show-faces="true"></div>
+          <script type="text/html" id="fb-feed-template">
+            <div class="feed-item">
+              <a href="#" data-bind="attr:{href:url}">
+                <h3 data-bind="text: name"></h3>
+              </a>
+            </div>
+          </script>
+        </div>
+        <div id="weather">
+          <div id="wx_module_2951">
+            <a href="http://www.weather.com/weather/local/BKXX0001">Banja Luka Weather Forecast, Bosnia And Herzegovina</a>
+          </div>
 
-                    <script type="text/javascript">
+          <script type="text/javascript">
 
-                        var wx_locID = 'BKXX0001';
-                        var wx_targetDiv = 'wx_module_2951';
-                        var wx_config = 'SZ=180x150*WX=FHW*LNK=SSNL*UNT=C*BGC=f8f6e7*MAP=null|null*DN=niccom.net*TIER=0*PID=1324813994*MD5=031b875865d4d418d607720aed31bc4d';
+            var wx_locID = 'BKXX0001';
+            var wx_targetDiv = 'wx_module_2951';
+            var wx_config = 'SZ=180x150*WX=FHW*LNK=SSNL*UNT=C*BGC=f8f6e7*MAP=null|null*DN=niccom.net*TIER=0*PID=1324813994*MD5=031b875865d4d418d607720aed31bc4d';
 
-                        document.write('<scr' + 'ipt src="' + document.location.protocol + '//wow.weather.com/weather/wow/module/' + wx_locID + '?config=' + wx_config + '&proto=' + document.location.protocol + '&target=' + wx_targetDiv + '"></scr' + 'ipt>');
-                    </script>
+            document.write('<scr' + 'ipt src="' + document.location.protocol + '//wow.weather.com/weather/wow/module/' + wx_locID + '?config=' + wx_config + '&proto=' + document.location.protocol + '&target=' + wx_targetDiv + '"></scr' + 'ipt>');
+          </script>
 
-                    <br>
-                    <br>
+          <br>
+          <br>
 
-                    <!--
+          <!--
 
                     <div class="wXbody">
 
@@ -140,14 +147,14 @@
 
 -->
 
-                    <br>
-                </div>
-            </div>
+          <br>
         </div>
-        <div id="footer">
-            <div>&copy; 2012 PC Servis</div>
-
-        </div>
+      </div>
     </div>
+    <div id="footer">
+      <div>&copy; 2012 PC Servis</div>
+
+    </div>
+  </div>
 </body>
 </html>
