@@ -1,7 +1,7 @@
 ﻿var links = {
     groups: [
         {
-            group: "Vijesti",
+            group: "Banja Luka",
             links: [
                 { url: "www.nezavisne.com", name: "Nezavisne" },
                 { url: "www.jutarnji.hr", name: "Jutarnji List" },
@@ -11,13 +11,13 @@
             ]
         },
         {
-            group: "Test",
+            group: "Vijesti",
             links: [
                 { url: "test.com", name: "Test" }
             ]
         },
         {
-            group: "Grupa 3",
+            group: "Ženski Kutak",
             links: [
                 { url: "www.klix.ba", name: "Klix" }
             ]
