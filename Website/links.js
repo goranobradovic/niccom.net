@@ -11,11 +11,9 @@
             ]
         },
         {
-            group: "Test grupa",
+            group: "Test",
             links: [
-                { url: "www.nezavisne.com", name: "Nezavisne" },
-                { url: "www.jutarnji.hr", name: "Jutarnji List" },
-                { url: "www.klix.ba", name: "Klix" }
+                { url: "test.com", name: "Test" }
             ]
         },
         {
