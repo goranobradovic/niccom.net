@@ -1,4 +1,12 @@
-﻿
+﻿String.prototype.format = function () {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function (match, number) {
+        return typeof args[number] != 'undefined'
+          ? args[number]
+          : match
+        ;
+    });
+};
 
 var Niccom = (function (Niccom) {
     /// <summary>
@@ -43,7 +51,7 @@ var Niccom = (function (Niccom) {
         };
     }
     function adjustWidth() {
-        $("#links").width($(window).width() - 500);
+        $("#content").width($(window).width() - 500);
     }
     function init() {
         /// <summary>
@@ -51,7 +59,7 @@ var Niccom = (function (Niccom) {
         /// Niccom.
         /// </summary>
         self.LinksViewModel = self.LinksViewModel || LinksViewModel(links);
-        ko.applyBindings(self.LinksViewModel);
+        ko.applyBindings(self.LinksViewModel, $("#links")[0]);
         $(window).resize(adjustWidth);
         adjustWidth();
 
@@ -65,6 +73,7 @@ var Niccom = (function (Niccom) {
             pause: 2500,
             hoverPause: true
         });
+        $(".tabs").tabs({selected:0});
     };
     $(document).ready(init);
     return self;

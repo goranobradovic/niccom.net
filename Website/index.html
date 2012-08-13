@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
     <meta property="og:title" content="PC Servis Niccom" />
@@ -13,12 +13,15 @@
     <meta property="fb:admins" content="100001139495518" />
     <title>PC Servis - Banja Luka - +387 65 696 696</title>
     <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+    <!--<script type="text/javascript" src="script/jquery-1.8.0.min.js"></script>-->
     <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
     <script type="text/javascript" src="links.js"></script>
     <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
+    <script type="text/javascript" src="script/fbUtils.js"></script>
     <script type="text/javascript" src="script/niccom.js"></script>
+    <script type="text/javascript" src="script/niccom.fb.js"></script>
     <script type="text/javascript" src="script/slides.min.jquery.js"></script>
 </head>
 <body role="application">
@@ -56,33 +59,41 @@
                     <img style="width: 180px; height: 264px;" alt="Servis i prodaja" src="images/info2.jpg"><br>
                     <div class="fb-like-box" data-href="https://www.facebook.com/pc.servis.niccom" data-width="185" data-height="325" data-show-faces="true" data-stream="false" data-header="true"></div>
                 </div>
-                <div id="links">
-                    <div data-bind="template: {name:'link-template', foreach:groups}">
+                <div id="content" class="tabs">
+                    <ul>
+                        <li><a href="#links">Linkovi</a></li>
+                        <li><a href="#fb-feed">Vijesti</a></li>
+                    </ul>
+                    <div id="links" class="group-container" data-bind="template: {name:'link-template', foreach:groups}">
                     </div>
-                    <script type="text/html" id="link-template">
-                        <div class="link-group" data-bind="style:{'background-color':color}">
-                            <div class="v-line"></div>
-                            <h3 data-bind="text: name"></h3>
-                            <ul data-bind="foreach:links">
-                                <li>
-                                    <a href="#" data-bind="attr:{href:url}">
-                                        <img data-bind="attr:{src:favicon}" src="#" alt="" />
-                                        <span data-bind="text:name"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </script>
-                    <div id="fb-feed">
+                    <div id="fb-feed" class="group-container">
+                        <ul data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
+                        </ul>
                     </div>
-                    <script type="text/html" id="fb-feed-template">
-                        <div class="feed-item">
-                            <a href="#" data-bind="attr:{href:url}">
-                                <h3 data-bind="text: name"></h3>
-                            </a>
-                        </div>
-                    </script>
                 </div>
+                <script type="text/html" id="link-template">
+                    <!--<div class="v-line"></div>-->
+                    <div class="link-group" data-bind="style:{'background-color':color}">
+                        <h3 data-bind="text: name"></h3>
+                        <ul data-bind="foreach:links">
+                            <li>
+                                <a href="#" data-bind="attr:{href:url}">
+                                    <img data-bind="attr:{src:favicon}" src="#" alt="" />
+                                    <span data-bind="text:name"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </script>
+                <script type="text/html" id="fb-feed-template">
+                    <li class="feed-item">
+                        <a href="#" data-bind="attr:{href:link}">
+                            <span class="title" data-bind="text: name"></span>
+                            <img src="#" data-bind="attr:{src:picture}, visible:picture" />
+                            <span class="description" data-bind="text: description"></span>
+                        </a>
+                    </li>
+                </script>
                 <div id="weather">
                     <!--<div id="wx_module_2951">
             <a href="http://www.weather.com/weather/local/BKXX0001">Banja Luka Weather Forecast, Bosnia And Herzegovina</a>
