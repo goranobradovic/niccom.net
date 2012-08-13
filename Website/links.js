@@ -11,7 +11,7 @@
             ]
         },
         {
-            group: "Grupa 2",
+            group: "Test grupa",
             links: [
                 { url: "www.nezavisne.com", name: "Nezavisne" },
                 { url: "www.jutarnji.hr", name: "Jutarnji List" },
