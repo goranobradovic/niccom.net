@@ -73,7 +73,7 @@ var Niccom = (function (Niccom) {
             pause: 2500,
             hoverPause: true
         });
-        $(".tabs").tabs({selected:0});
+        $(".tabs").tabs();
     };
     $(document).ready(init);
     return self;
