@@ -114,6 +114,7 @@ div#fb-feed, div#links {
     div#fb-feed .title {
         display: block;
         padding: 0 0 10px;
+        font-size: 14px;
     }
 
     div#fb-feed .description {
