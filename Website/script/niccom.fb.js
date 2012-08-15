@@ -29,9 +29,9 @@ var Niccom = (function (Niccom) {
         }
 
         function _refreshCallback(response) {
-            var items = response.data.filter(function (item) { if (item.from.id == self.fb.pageId && item.story) { return item; } });
-            var feedList = $.map(items, function (item) { return new FeedItem(item) });
-            self.feedItems(feedList);
+            var feed = response.data.filter(function (item) { if (item.from.id == self.fb.pageId && item.story) { return item; } });
+            var feedItems = $.map(feed, function (item) { return new FeedItem(item) });
+            self.feedItems(feedItems);
         };
         return {
             /// Niccom.refresh.refresh()
@@ -58,6 +58,7 @@ var Niccom = (function (Niccom) {
         self.FBFeed = self.FBFeed || FBFeed();
         ko.applyBindings(self.FBFeed, $("#fb-feed")[0]);
         self.FBFeed.refresh();
+        setInterval(self.FBFeed.refresh, 30000);
     };
     $(document).ready(init);
     return self;

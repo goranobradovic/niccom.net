@@ -23,7 +23,7 @@ var fbUtils = (function (fbUtils) {
                 });
             }
             else {
-                _getTokenCallback(self.token, pageId);
+                _getTokenCallback(self.token, pageId, callback);
             }
         }
         function _getTokenCallback(token, pageId, callback) {
