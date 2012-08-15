@@ -8,6 +8,7 @@
                 { url: "www.index.hr", name: "Index" },
                 { url: "www.dnevniavaz.ba", name: "Dnevni Avaz" },
                 { url: "www.klix.ba", name: "Klix" }
+                { url: "www.pc-servis.com", name: "PC Servis" }
             ]
         },
         {
