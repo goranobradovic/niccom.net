@@ -1,6 +1,6 @@
 ﻿@import url("smoothness/jquery-ui-1.8.22.custom.css");
 
-body {
+body, .ui-widget {
     font-family: Calibri;
 }
 
@@ -20,6 +20,9 @@ div#search-engine {
     width: 100%;
 }
 
+div#search-engine a {
+    color:transparent;
+}
     div#search-engine #engines {
         width: 405px;
         height: 180px;
@@ -72,7 +75,7 @@ div#content {
     div#content > div {
         margin-left: auto;
         margin-right: auto;
-        text-align: start;
+        text-align: left;
     }
 
         div#content > div.fb-like {
