@@ -21,6 +21,7 @@
     <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
     <script type="text/javascript" src="script/fbUtils.js"></script>
     <script type="text/javascript" src="script/niccom.js"></script>
+    <script type="text/javascript" src="script/jquery.cookie.js"></script>
     <script type="text/javascript" src="script/niccom.fb.js"></script>
     <script type="text/javascript" src="script/slides.min.jquery.js"></script>
 </head>
@@ -37,17 +38,56 @@
     </script>
     <div style="text-align: center;">
         <div id="search-engine" role="search">
-            <div id="search-engine-google">
-                <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png"><br>
-                <br>
-                <form method="get" action="http://www.google.com/search">
-                <input name="q" size="61" maxlength="255" value="" type="text">
-                <br>
-                <br>
-                <input value="Google Pretraga" type="submit">
-                <br>
-                </form>
+            <div id="engines" class="engines">
+                <div id="search-engine-google">
+                    <a href="http://www.google.com/ncr">
+                        <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png">
+                    </a>
+                    <br>
+                    <form method="get" action="http://www.google.com/search">
+                    <input name="q" size="61" maxlength="255" value="" type="text">
+                    <br>
+                    <br>
+                    <input value="Google Pretraga" type="submit">
+                    <br>
+                    </form>
+                </div>
+                <div id="search-engine-bing">
+                    <a href="http://www.bing.com/">
+                        <img src="images/bing.jpg" alt="bing" border="0"><br>
+                    </a>
+                    <form method="get" action="http://www.bing.com/search">
+                    <input name="cp" value="ISO-8859-1" type="hidden">
+                    <input name="FORM" value="FREEWS" type="hidden">
+                    <table style="background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <div style="text-align: left;">
+                                        <input name="q" size="61" type="text"><br>
+                                        <br>
+                                    </div>
+
+                                    <input value="Bing Pretraga" type="submit">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
             </div>
+            <ul class="search-engines-pagination">
+                <li>
+                    <a href="#google">
+                        <img alt="Google" src="images/google.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#bing">
+                        <img alt="Bing" src="images/bing.jpg">
+                    </a>
+                </li>
+            </ul>
         </div>
         <div id="niccom-contents" role="region">
             <div id="columnsContainer">
@@ -73,8 +113,8 @@
                 </div>
                 <script type="text/html" id="link-template">
                     <!--<div class="v-line"></div>-->
-                    <div class="link-group" data-bind="style:{'background-color':color}">
-                        <h3 data-bind="text: name"></h3>
+                    <div class="link-group item" data-bind="style:{'background-color':color}">
+                        <span class="title" data-bind="text: name"></span>
                         <ul data-bind="foreach:links">
                             <li>
                                 <a href="#" data-bind="attr:{href:url}">
@@ -86,7 +126,7 @@
                     </div>
                 </script>
                 <script type="text/html" id="fb-feed-template">
-                    <li class="feed-item">
+                    <li class="feed-item item">
                         <a href="#" data-bind="attr:{href:link}">
                             <span class="title" data-bind="text: name"></span>
                             <img src="#" data-bind="attr:{src:picture}, visible:picture" />

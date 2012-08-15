@@ -13,6 +13,7 @@ var Niccom = (function (Niccom) {
     /// part of the Niccom module
     /// </summary>
     var self = Niccom;
+    self.user_settings_cookie = "niccom_user_settings";
 
     function LinkViewModel(data) {
         var self = this;
@@ -53,6 +54,9 @@ var Niccom = (function (Niccom) {
     function adjustWidth() {
         $("#content").width($(window).width() - 500);
     }
+    function saveSettings() {
+        $.cookie(self.user_settings_cookie, JSON.stringify(self.userSettings));
+    }
     function init() {
         /// <summary>
         /// This places result of Links() execution under
@@ -60,20 +64,45 @@ var Niccom = (function (Niccom) {
         /// </summary>
         self.LinksViewModel = self.LinksViewModel || LinksViewModel(links);
         ko.applyBindings(self.LinksViewModel, $("#links")[0]);
+
         $(window).resize(adjustWidth);
         adjustWidth();
 
         $.getJSON("https://graph.facebook.com/pc.servis.niccom/", function (data) {
             self.info = data;
         });
+        self.userSettings = JSON.parse($.cookie(self.user_settings_cookie)) || { search: 1, tab: 0 };
+        
+        $('div#search-engine').slides({
+            //effect: 'slide, fade',
+            //crossfade: true,
+            //slideSpeed: 350,
+            //fadeSpeed: 500,
+            //generateNextPrev: true,
+            container: 'engines',
+            generatePagination: false,
+            play: 0,
+            paginationClass: 'search-engines-pagination',
+            start: self.userSettings.search,
+            animationComplete: function (current) {
+                self.userSettings.search = current;
+                saveSettings();
+            }
+        });
         $("#slides").slides({
             pagination: false,
             generatePagination: false,
             play: 7500,
             pause: 2500,
-            hoverPause: true
+            hoverPause: true,
         });
-        $(".tabs").tabs();
+        $(".tabs").tabs({
+            selected: self.userSettings.tab,
+            select: function (event, ui) {
+                self.userSettings.tab = ui.index;
+                saveSettings();
+            }
+        });
     };
     $(document).ready(init);
     return self;

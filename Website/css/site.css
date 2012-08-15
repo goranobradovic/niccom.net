@@ -1,7 +1,45 @@
 ﻿@import url("smoothness/jquery-ui-1.8.22.custom.css");
 
+body {
+    font-family: Calibri;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
 div#search-engine {
     margin: 0 0 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+    div#search-engine #engines {
+        width: 405px;
+        height: 180px;
+        margin:auto;
+        display:inline-block !important;
+        text-align:center;
+    }
+
+        div#search-engine #engines > div {
+            width: 405px;
+            height: 180px;
+            display: block;
+            overflow:hidden;
+        }
+.search-engines-pagination {
+    display:inline-block;
+    width:0;
+}
+.search-engines-pagination a img {
+    width: 40px;
 }
 
 #columnsContainer {
@@ -28,7 +66,7 @@ div#content {
     -ms-hyphens: auto;
     text-align: center;
     width: auto;
-    margin:0 20px 0 20px;
+    margin: 0 20px 0 20px;
 }
 
     div#content > div {
@@ -55,24 +93,22 @@ div.link-group, .feed-item {
     display: inline-table;
     border-left: 1px solid #ccc;
     border-top: 1px solid #ddd;
-    padding: 0 10px;
-    height:200px;
+    padding: 10px;
+    height: 200px;
 }
 
 
     div.link-group > ul {
-        list-style-type: none;
-        padding: 0 0 0 5px;
         width: 150px;
     }
 
         div.link-group > ul > li {
             display: block;
             clear: both;
+            margin-left: 10px;
         }
 
 div#content a {
-    text-decoration: none;
     color: black;
     line-height: 16px;
     font-weight: bold;
@@ -89,12 +125,10 @@ div.link-group > ul > li > a > img {
 }
 
 div#fb-feed, div#links {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
     div#fb-feed ul {
-        list-style-type: none;
-        padding: 0 0 0 5px;
         text-align: start;
     }
 
@@ -111,20 +145,21 @@ div#fb-feed, div#links {
         float: left;
     }
 
-    div#fb-feed .title {
-        display: block;
-        padding: 0 0 10px;
-        font-size: 14px;
-    }
+div.group-container span {
+    font-size: 12px;
+}
 
-    div#fb-feed .description {
-        font-size: 12px;
-        font-weight: normal;
-        color: #222;
-    }
+.item .title {
+    display: block;
+    padding: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-body {
-    font-family: Calibri;
+div#fb-feed .description {
+    font-size: 12px;
+    font-weight: normal;
+    color: #222;
 }
 
 
@@ -139,3 +174,8 @@ body {
         height: 620px;
         display: block;
     }
+
+
+ul.ui-tabs-nav {
+    font-size: 15px;
+}
