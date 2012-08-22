@@ -4,8 +4,8 @@
             group: "Banja Luka",
             links: [
                 { url: "blmap.inecco.net/index.html", name: "Mapa Banja Luke", favicon: "www.inecco.net/favicon.ico" },
-                { url: "www.bl-bioskop.ba", name: "Bioskop Palas", favicon: "www.bl-bioskop.ba/favicon.ico" },
                 { url: "www.banjaluka.rs.ba", name: "Grad Banja Luka", favicon: "http://www.banjaluka.rs.ba/favicon.ico" },
+                { url: "www.bl-bioskop.ba", name: "Bioskop Palas", favicon: "www.bl-bioskop.ba/favicon.ico" },
                 { url: "www.banjaluka-tourism.com", name: "TOBL", favicon: "www.banjaluka-tourism.com/favicon.ico" }
             ]
         },
