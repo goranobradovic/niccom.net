@@ -3,49 +3,43 @@
         {
             group: "Banja Luka",
             links: [
-                { url: "www.nezavisne.com", name: "Nezavisne" },
-                { url: "www.jutarnji.hr", name: "Jutarnji List" },
-                { url: "www.index.hr", name: "Index" },
-                { url: "www.dnevniavaz.ba", name: "Dnevni Avaz" },
-                { url: "www.klix.ba", name: "Klix" },
-                { url: "www.pc-servis.com", name: "PC Servis" }
+                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
         {
             group: "Vijesti",
             links: [
-                { url: "test.com", name: "Test" }
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test" }
             ]
         },
         {
             group: "Ženski Kutak",
             links: [
-                { url: "www.klix.ba", name: "Klix" }
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test" }
             ]
         },
         {
-            group: "Grupa 4",
+            group: "TV Program",
             links: [
-                { url: "www.nezavisne.com", name: "Nezavisne" },
-                { url: "www.jutarnji.hr", name: "Jutarnji List" },
-                { url: "www.index.hr", name: "Index" },
-                { url: "www.dnevniavaz.ba", name: "Dnevni Avaz" },
-                { url: "www.klix.ba", name: "Klix" }
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test" }
             ]
         },
         {
-            group: "Zabava",
+            group: "OnLine TV",
             links: [
-                { url: "www.facebook.com", name: "Facebook" },
-                { url: "www.twitter.com", name: "Twitter" },
-                { url: "plus.google.com", name: "Google plus" },
-                { url: "www.cafe.ba", name: "Cafe.ba" },
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test" }
             ]
         },
         {
-            group: "Torrenti",
+            group: "OnLine Radio",
             links: [
-                { url: "thepiratebay.se", name: "Pirate bay" },
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test" }
             ]
         },
         {
