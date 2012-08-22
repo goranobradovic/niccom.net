@@ -3,7 +3,7 @@
         {
             group: "Banja Luka",
             links: [
-                { url: "http://blmap.inecco.net/index.html", name: "Mapa Banja Luke", favicon: "hhttp://www.inecco.net/favicon.ico" },
+                { url: "http://blmap.inecco.net/index.html", name: "Mapa Banja Luke", favicon: "http://www.inecco.net/favicon.ico" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
