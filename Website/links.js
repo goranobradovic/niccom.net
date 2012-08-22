@@ -210,6 +210,6 @@
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
-        {}, {}, {}, {}, {}
+        {}, {}
     ]
 };
