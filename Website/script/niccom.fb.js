@@ -8,10 +8,9 @@ var Niccom = (function (Niccom) {
     var self = Niccom;
     self.fb = {
         appId: '401636853233967',
-        secret: '7d3598c668568fa5f73480647f5c0769',
-        pageId: '80391908103'
+        secret: '7d3598c668568fa5f73480647f5c0769'
     };
-    function FBFeed() {
+    function FBFeed(pageId) {
         /// <summary>
         /// FBFeed submodule of the Niccom
         /// </summary>
@@ -19,17 +18,18 @@ var Niccom = (function (Niccom) {
         var self = this;
         self.fb = fb;
         self.feedItems = ko.observableArray([]);
+		self.pageId = ko.observable(pageId);
 
         var _refresh = function () {
             /// <summary>
             /// refresh method in Niccom.FBFeed
             /// </summary>
 
-            fbUtils.Feed.get(self.fb.appId, self.fb.secret, self.fb.pageId, _refreshCallback);
+            fbUtils.Feed.get(self.fb.appId, self.fb.secret, self.pageId(), _refreshCallback);
         }
 
         function _refreshCallback(response) {
-            var feed = response.data.filter(function (item) { if (item.from.id == self.fb.pageId && item.story) { return item; } });
+            var feed = response.data.filter(function (item) { if (item.from.id == self.pageId() && item.story) { return item; } });
             var feedItems = $.map(feed, function (item) { return new FeedItem(item) });
             self.feedItems(feedItems);
         };
@@ -55,7 +55,7 @@ var Niccom = (function (Niccom) {
         /// This places result of FBFeed() execution under
         /// Niccom.
         /// </summary>
-        self.FBFeed = self.FBFeed || FBFeed();
+        self.FBFeed = self.FBFeed || FBFeed($("#fb-feed").attr("data-pageId"));
         ko.applyBindings(self.FBFeed, $("#fb-feed")[0]);
         self.FBFeed.refresh();
         setInterval(self.FBFeed.refresh, 30000);
