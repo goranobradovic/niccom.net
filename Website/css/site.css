@@ -24,7 +24,7 @@ div#search-engine a {
     color:transparent;
 }
     div#search-engine #engines {
-        width: 405px;
+        width: 415px;
         height: 180px;
         margin:auto;
         display:inline-block !important;
@@ -32,7 +32,7 @@ div#search-engine a {
     }
 
         div#search-engine #engines > div {
-            width: 405px;
+            width: 415px;
             height: 180px;
             display: block;
             overflow:hidden;
