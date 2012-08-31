@@ -75,7 +75,7 @@ div#content {
     div#content > div {
         margin-left: auto;
         margin-right: auto;
-        text-align: left;
+        /*text-align: left;*/
     }
 
         div#content > div.fb-like {
@@ -94,15 +94,16 @@ div.v-line {
 div.link-group, .feed-item {
     vertical-align: top;
     display: inline-table;
-    border-left: 1px solid #ccc;
+    border: 1px solid #ccc;
     border-top: 1px solid #ddd;
     padding: 10px;
     height: 200px;
+    text-align:left;
 }
 
 
     div.link-group > ul {
-        width: 150px;
+        width: 135px;
     }
 
         div.link-group > ul > li {
