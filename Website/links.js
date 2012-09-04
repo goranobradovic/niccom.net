@@ -1,18 +1,9 @@
 ﻿var links = {
     groups: [
         {
-            group: "Banja Luka",
-            links: [
-                { url: "blmap.inecco.net/index.html", name: "Mapa Banja Luke", favicon: "www.inecco.net/favicon.ico" },
-                { url: "www.banjaluka.rs.ba", name: "Grad Banja Luka", favicon: "http://www.banjaluka.rs.ba/favicon.ico" },
-                { url: "www.bl-bioskop.ba", name: "Bioskop Palas", favicon: "www.bl-bioskop.ba/favicon.ico" },
-                { url: "www.banjaluka-tourism.com", name: "TOBL", favicon: "www.banjaluka-tourism.com/favicon.ico" }
-            ]
-        },
-        {
             group: "Vijesti",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
