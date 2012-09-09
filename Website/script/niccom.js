@@ -101,8 +101,14 @@ var Niccom = (function (Niccom) {
             select: function (event, ui) {
                 self.userSettings.tab = ui.index;
                 saveSettings();
+                var wall = $(this).find(".masonry").eq(ui.index);
+                setTimeout(function () { wall.masonry('reload'); }, 5);
             }
         });
+        $(".wall").masonry({
+            isAnimated:true
+        });
+        
     };
     $(document).ready(init);
     return self;

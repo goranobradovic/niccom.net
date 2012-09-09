@@ -24,6 +24,7 @@
     <script type="text/javascript" src="script/jquery.cookie.js"></script>
     <script type="text/javascript" src="script/niccom.fb.js"></script>
     <script type="text/javascript" src="script/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="script/jquery.masonry.min.js"></script>
 </head>
 <body role="application">
     <div id="fb-root"></div>
@@ -104,11 +105,9 @@
                         <li><a href="#links">Linkovi</a></li>
                         <li><a href="#fb-feed">Vijesti</a></li>
                     </ul>
-                    <div id="links" class="group-container" data-bind="template: {name:'link-template', foreach:groups}">
+                    <div id="links" class="group-container wall" data-bind="template: {name:'link-template', foreach:groups}">
                     </div>
-                    <div id="fb-feed" class="group-container" data-pageId="211109072292192">
-                        <ul data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
-                        </ul>
+                    <div id="fb-feed" class="group-container wall" data-pageId="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
                     </div>
                 </div>
                 <script type="text/html" id="link-template">
@@ -125,13 +124,13 @@
                     </div>
                 </script>
                 <script type="text/html" id="fb-feed-template">
-                    <li class="feed-item item">
+                    <div class="feed-item item">
                         <a href="#" data-bind="attr:{href:link}">
                             <span class="title" data-bind="text: name"></span>
                             <img src="#" data-bind="attr:{src:picture}, visible:picture" />
-                            <span class="description" data-bind="text: description"></span>
+                            <span class="description" data-bind="html: description"></span>
                         </a>
-                    </li>
+                    </div>
                 </script>
                 <div id="weather">
                     <!--<div id="wx_module_2951">

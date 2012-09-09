@@ -20,30 +20,33 @@ div#search-engine {
     width: 100%;
 }
 
-div#search-engine a {
-    color:transparent;
-}
+    div#search-engine a {
+        color: transparent;
+    }
+
     div#search-engine #engines {
         width: 415px;
         height: 180px;
-        margin:auto;
-        display:inline-block !important;
-        text-align:center;
+        margin: auto;
+        display: inline-block !important;
+        text-align: center;
     }
 
         div#search-engine #engines > div {
             width: 415px;
             height: 180px;
             display: block;
-            overflow:hidden;
+            overflow: hidden;
         }
+
 .search-engines-pagination {
-    display:inline-block;
-    width:0;
+    display: inline-block;
+    width: 0;
 }
-.search-engines-pagination a img {
-    width: 40px;
-}
+
+    .search-engines-pagination a img {
+        width: 40px;
+    }
 
 #columnsContainer {
     width: 100%;
@@ -82,28 +85,21 @@ div#content {
             text-align: left;
         }
 
-div.v-line {
-    width: 0px;
-    border-left: 1px solid black;
-    display: block;
-    float: left;
-    clear: left;
-    height: 100px;
-}
 
 div.link-group, .feed-item {
     vertical-align: top;
-    display: inline-table;
+    /*display: inline-table;*/
+    float: left;
     border: 1px solid #ccc;
     border-top: 1px solid #ddd;
     padding: 10px;
-    height: 200px;
-    text-align:left;
+    min-height: 50px;
+    text-align: left;
 }
 
 
     div.link-group > ul {
-        width: 135px;
+        min-width: 135px;
     }
 
         div.link-group > ul > li {
@@ -132,16 +128,12 @@ div#fb-feed, div#links {
     padding: 10px 0;
 }
 
-    div#fb-feed ul {
-        text-align: start;
+    div#fb-feed > div {
+        width: 200px;
+        padding: 10px;
+        float:left;
+        vertical-align: top;
     }
-
-        div#fb-feed ul li {
-            width: 300px;
-            padding: 10px;
-            /*float:left;*/
-            vertical-align: top;
-        }
 
     div#fb-feed img {
         width: 100px;
@@ -158,6 +150,7 @@ div.group-container span {
     padding: 0 0 10px;
     font-size: 14px;
     font-weight: bold;
+    float: left;
 }
 
 div#fb-feed .description {

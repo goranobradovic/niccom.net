@@ -10,7 +10,7 @@ var Niccom = (function (Niccom) {
         appId: '401636853233967',
         secret: '7d3598c668568fa5f73480647f5c0769'
     };
-    function FBFeed(pageId) {
+    function FBFeed(pageId, postLoad) {
         /// <summary>
         /// FBFeed submodule of the Niccom
         /// </summary>
@@ -18,7 +18,8 @@ var Niccom = (function (Niccom) {
         var self = this;
         self.fb = fb;
         self.feedItems = ko.observableArray([]);
-		self.pageId = ko.observable(pageId);
+        self.pageId = ko.observable(pageId);
+        self.postLoad = postLoad;
 
         var _refresh = function () {
             /// <summary>
@@ -32,10 +33,16 @@ var Niccom = (function (Niccom) {
             var feed = response.data.filter(function (item) { if (item.from.id == self.pageId() && item.story) { return item; } });
             var feedItems = $.map(feed, function (item) { return new FeedItem(item) });
             self.feedItems(feedItems);
+            if (self.postLoad) {
+                self.postLoad();
+            }
         };
         return {
             /// Niccom.refresh.refresh()
-            refresh: _refresh
+            refresh: _refresh,
+            setPostLoad: function (postLoad) {
+                self.postLoad = postLoad;
+            }
         };
     }
 
@@ -55,11 +62,14 @@ var Niccom = (function (Niccom) {
         /// This places result of FBFeed() execution under
         /// Niccom.
         /// </summary>
-        self.FBFeed = self.FBFeed || FBFeed($("#fb-feed").attr("data-pageId"));
+        self.FBFeed = self.FBFeed || FBFeed($("#fb-feed").attr("data-pageId"), postLoad);
         ko.applyBindings(self.FBFeed, $("#fb-feed")[0]);
         self.FBFeed.refresh();
         setInterval(self.FBFeed.refresh, 30000);
     };
+    function postLoad() {
+        $("#fb-feed").masonry('reload');
+    }
     $(document).ready(init);
     return self;
 }(Niccom || {}));
