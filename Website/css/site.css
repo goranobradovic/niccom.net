@@ -95,11 +95,12 @@ div.link-group, .feed-item {
     padding: 10px;
     min-height: 50px;
     text-align: left;
+    width:135px;
 }
 
 
     div.link-group > ul {
-        min-width: 135px;
+        width: 135px;
     }
 
         div.link-group > ul > li {
