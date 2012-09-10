@@ -65,7 +65,7 @@ var Niccom = (function (Niccom) {
         self.FBFeed = self.FBFeed || FBFeed($("#fb-feed").attr("data-pageId"), postLoad);
         ko.applyBindings(self.FBFeed, $("#fb-feed")[0]);
         self.FBFeed.refresh();
-        setInterval(self.FBFeed.refresh, 30000);
+        setInterval(self.FBFeed.refresh, 120000);
     };
     function postLoad() {
         $("#fb-feed").masonry('reload');

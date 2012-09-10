@@ -72,7 +72,7 @@ var Niccom = (function (Niccom) {
             self.info = data;
         });
         self.userSettings = JSON.parse($.cookie(self.user_settings_cookie)) || { search: 1, tab: 0 };
-        
+
         $('div#search-engine').slides({
             //effect: 'slide, fade',
             //crossfade: true,
@@ -89,13 +89,17 @@ var Niccom = (function (Niccom) {
                 saveSettings();
             }
         });
-        $("#slides").slides({
-            pagination: false,
-            generatePagination: false,
-            play: 7500,
-            pause: 2500,
-            hoverPause: true,
+        /*
+        $("#weather-slides div.slides_container").load('weather.html', function () {
+            $("#weather-slides").slides({
+                pagination: false,
+                generatePagination: false,
+                play: 7500,
+                pause: 2500,
+                hoverPause: true,
+            });
         });
+        */
         $(".tabs").tabs({
             selected: self.userSettings.tab,
             select: function (event, ui) {
@@ -106,9 +110,10 @@ var Niccom = (function (Niccom) {
             }
         });
         $(".wall").masonry({
-            isAnimated:true
+            isAnimated: true,
+            isFitWidth: true
         });
-        
+
     };
     $(document).ready(init);
     return self;

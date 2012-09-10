@@ -13,18 +13,6 @@
     <title>PC Servis - Banja Luka - +387 65 696 696</title>
     <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
     <link rel="stylesheet" type="text/css" href="css/site.css" />
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
-    <!--<script type="text/javascript" src="script/jquery-1.8.0.min.js"></script>-->
-    <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
-    <script type="text/javascript" src="links.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
-    <script type="text/javascript" src="script/fbUtils.js"></script>
-    <script type="text/javascript" src="script/niccom.js"></script>
-    <script type="text/javascript" src="script/jquery.cookie.js"></script>
-    <script type="text/javascript" src="script/niccom.fb.js"></script>
-    <script type="text/javascript" src="script/slides.min.jquery.js"></script>
-    <script type="text/javascript" src="script/jquery.masonry.min.js"></script>
 </head>
 <body role="application">
     <div id="fb-root"></div>
@@ -107,7 +95,7 @@
                     </ul>
                     <div id="links" class="group-container wall" data-bind="template: {name:'link-template', foreach:groups}">
                     </div>
-                    <div id="fb-feed" class="group-container wall" data-pageId="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
+                    <div id="fb-feed" class="group-container wall" data-pageid="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
                     </div>
                 </div>
                 <script type="text/html" id="link-template">
@@ -133,72 +121,22 @@
                     </div>
                 </script>
                 <div id="weather">
-                    <!--<div id="wx_module_2951">
-            <a href="http://www.weather.com/weather/local/BKXX0001">Banja Luka Weather Forecast, Bosnia And Herzegovina</a>
-          </div>-->
-
-                    <!--
-          <script type="text/javascript">
-
-            var wx_locID = 'BKXX0001';
-            var wx_targetDiv = 'wx_module_2951';
-            var wx_config = 'SZ=180x150*WX=FHW*LNK=SSNL*UNT=C*BGC=f8f6e7*MAP=null|null*DN=niccom.net*TIER=0*PID=1324813994*MD5=031b875865d4d418d607720aed31bc4d';
-
-            document.write('<scr' + 'ipt src="' + document.location.protocol + '//wow.weather.com/weather/wow/module/' + wx_locID + '?config=' + wx_config + '&proto=' + document.location.protocol + '&target=' + wx_targetDiv + '"></scr' + 'ipt>');
-          </script>
-
-          <br>
-          <br>
-              -->
-
-                    <!-- <div class="wXbody">
-
-                        <iframe id="WeatherBugSticker_180x150_v2" src="http://weather.weatherbug.com/desktop-weather/web-widgets/getSticker.html?CityCode=77483&amp;ZCode=z5545&amp;Size=180x150&amp;units=1&amp;Version=2&amp;StationID=LQBK&amp;lang_id=en-us" allowtransparency="yes" frameborder="0" height="96" scrolling="no" width="174"></iframe>
-
-                        <div class="wXlinks">
-                            <span class="link"><a href="http://weather.weatherbug.com/weather-forecast.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/Bosnia and Herzegovina/Banja Luka-weather/local-forecast/7-day-forecast.html?zcode=z5545&units=1'">Forecast</a></span>
-                            <span class="link"><a href="http://weather.weatherbug.com/satellite-radar.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/Bosnia and Herzegovina/Banja Luka-weather/satellite/infrared-satellite.html?zcode=z5545&units=1'">Satellite</a></span>
-                            <span class="link"><a href="http://weather.weatherbug.com/weather-photos/photo-gallery.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/weather-photos/photo-gallery.html?zcode=z5545&units=1&city=77483'">Photos</a></span>
-
-                            <div class="footer">
-                                <a href="http://weather.weatherbug.com/default.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/Bosnia and Herzegovina/Banja Luka-weather.html?zcode=z5545&units=1'">
-                                    <img src="http://img.weather.weatherbug.com/images/stickers/v2/180x150/wxbug-logo.jpg" alt="WeatherBug" border="0"></a>
-                            </div>
-                        </div>
-                    </div>-->
-
-                    <div id="slides">
+                    <!--<script type="text/javascript" src="http://voap.weather.com/weather/oap/BKXX0001?template=GENXV&par=3000000007&unit=1&key=twciweatherwidget"></script>-->
+                    <div style="font: 10px Tahoma; padding: 3px;"><a style="color: #000000; text-decoration: none" href="http://freemeteo.com">Weather by Freemeteo.com</a></div>
+                    <script>
+                        //Live weather feeds by freemeteo.com 
+                        //The use of this script is bound by Freemeteo?s Live Feed Service Agreement, as is published in the following url: http://www.freemeteo.com/default.asp?pid=178&la=1
+                        // You are not allowed to change or delete any part of this script.
+                        // Main body background color : FFFFFF
+                        // Main body fonts color : 000000
+                        // Header/Footer background color : 6699FF
+                        // Header/Footer fonts color : FFFFFF
+                        cIfrm = "2";
+                        gid = "818965_20120909_183544";
+                    </script>
+                    <script src="http://www.freemeteo.com/templates/default/HTfeeds.js" type="text/javascript"></script>
+                    <div id="weather-slides">
                         <div class="slides_container">
-                            <div>
-                                <div style="font: 10px Tahoma; padding: 3px;"><a style="color: #000000; text-decoration: none" href="http://freemeteo.com">Weather by Freemeteo.com</a></div>
-                                <script>
-                                    //Live weather feeds by freemeteo.com 
-                                    //The use of this script is bound by Freemeteo’s Live Feed Service Agreement, as is published in the following url: http://www.freemeteo.com/default.asp?pid=178&la=1
-                                    // You are not allowed to change or delete any part of this script.
-                                    // Main body background color : FFFFFF
-                                    // Main body fonts color : 000000
-                                    // Header/Footer background color : 909090
-                                    // Header/Footer fonts color : FFFFFF
-                                    cIfrm = "3";
-                                    gid = "935611_20120811_230645";
-                                </script>
-                                <script src="http://www.freemeteo.com/templates/default/HTfeeds.js" type="text/javascript"></script>
-                            </div>
-                            <div>
-                                <div style="font: 10px Tahoma; padding: 3px;"><a style="color: #000000; text-decoration: none" href="http://freemeteo.com">Weather by Freemeteo.com</a></div>
-                                <script>
-                                    //Live weather feeds by freemeteo.com 
-                                    //The use of this script is bound by Freemeteo’s Live Feed Service Agreement, as is published in the following url: http://www.freemeteo.com/default.asp?pid=178&la=1
-                                    // You are not allowed to change or delete any part of this script.
-                                    // Main body background color : FFFFFF
-                                    // Main body fonts color : 000000
-                                    // Header/Footer background color : 909090
-                                    // Header/Footer fonts color : FFFFFF
-                                    cIfrm = "4";
-                                    gid = "757282_20120811_230851";
-                                </script>
-                                <script src="http://www.freemeteo.com/templates/default/HTfeeds.js" type="text/javascript"></script>
-                            </div>
                         </div>
                     </div>
                     <!--<div class="fb-facepile" data-href="https://www.facebook.com/pc.servis.niccom" data-max-rows="5" data-width="180"></div>-->
@@ -212,6 +150,19 @@
 
         </div>
     </div>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+    <!--<script type="text/javascript" src="script/jquery-1.8.0.min.js"></script>-->
+    <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
+    <script type="text/javascript" src="links.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
+    <script type="text/javascript" src="script/fbUtils.js"></script>
+    <script type="text/javascript" src="script/niccom.js"></script>
+    <script type="text/javascript" src="script/jquery.cookie.js"></script>
+    <script type="text/javascript" src="script/niccom.fb.js"></script>
+    <script type="text/javascript" src="script/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="script/jquery.masonry.min.js"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
