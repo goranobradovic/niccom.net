@@ -152,8 +152,14 @@
         {
             group: "Programi",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.filehippo.com", name: "File Hippo" },
+                { url: "www.majorgeeks.com", name: "Major Geeks" },
+                { url: "www.fileforum.com", name: "File Forum" },
+                { url: "www.freewarefiles.com", name: "Freeware Files" },
+                { url: "www.snapfiles.com", name: "Snap Files" },
+                { url: "www.100-downloads.com", name: "100 Downloads" },
+                { url: "www.giveawayoftheday.com", name: "Giveaway of the Day" },
+                { url: "www.download.com", name: "CNET Download }
             ]
         },
         {
