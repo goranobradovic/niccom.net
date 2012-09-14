@@ -162,7 +162,6 @@
                 { url: "www.magicmovies.com", name: "Magic Movies" },
                 { url: "www.dreammovies.com", name: "Dream Movies" },
                 { url: "www.milfmovs.com", name: "Milf Movies" },
-                { url: "www.ass4all.com", name: "Ass4All Movies" },
                 { url: "www.jizzle.com", name: "Jizzle Movies" },
                 { url: "www.gigantits.com", name: "GiganTits Movies" },
                 { url: "www.ass4all.com", name: "Ass4All Movies" },
