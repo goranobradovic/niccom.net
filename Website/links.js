@@ -159,8 +159,14 @@
         {
             group: "XXX",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.magicmovies.com", name: "Magic Movies" },
+                { url: "www.dreammovies.com", name: "Dream Movies" },
+                { url: "www.milfmovs.com", name: "Milf Movies" },
+                { url: "www.ass4all.com", name: "Ass4All Movies" },
+                { url: "www.jizzle.com", name: "Jizzle Movies" },
+                { url: "www.gigantits.com", name: "GiganTits Movies" },
+                { url: "www.ass4all.com", name: "Ass4All Movies" },
+                { url: "www.teensnow.com", name: "Teen Snow Movies" }
             ]
         },
         {
