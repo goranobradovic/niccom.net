@@ -228,9 +228,15 @@
                 { url: "answers.yahoo.com", name: "Yahoo! Answers", },
                 { url: "www.about.com", name: "About", },
                 { url: "www.answers.com", name: "Answers", },
-                { url: "www.answers.com", name: "Answers", },
-                { url: "www.answers.com", name: "Answers", },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.ehow.com", name: "eHow", },
+                { url: "www.reference.com", name: "Reference", },
+                { url: "books.google.com", name: "Google Books", },
+                { url: "www.wikihow.com", name: "wikiHow", },
+                { url: "www.howstuffworks.com", name: "HowStuffWorks", },
+                { url: "www.britannica.com", name: "Encyclopedia Britanica", },
+                { url: "www.wikia.com", name: "Wikia", },
+                { url: "www.squidoo.com", name: "Squidoo", },
+                { url: "www.scribd.com", name: "Scribd", }
             ]
         },
         {
