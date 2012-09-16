@@ -3,15 +3,24 @@
         {
             group: "Vijesti",
             links: [
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.index.hr", name: "Index" },
+                { url: "www.nezavisne.com", name: "Nezavisne", },
+                { url: "www.blic.rs", name: "Blic" },
+                { url: "www.dnevniavaz.ba", name: "Dnevni Avaz", },
+                { url: "www.glassrpske.com", name: "Glas Srpske" },
+                { url: "www.b92.net", name: "B92", },
+                { url: "www.vijesti.ba", name: "Vijesti.ba" },
+                { url: "www.vecernji.hr", name: "Večernji List" },
+                { url: "www.vijesti.me", name: "Vijesti.me" },
+                { url: "www.frontal.rs", name: "Frontal" },
+                { url: "www.6yka.com", name: "Buka" },
+                { url: "www.jutarnji.hr", name: "Jutarnji list" },
+                { url: "www.klix.ba", name: "Klix" },
+                { url: "www.mondo.rs", name: "Mondo" },
+                { url: "www.dnevnik.hr", name: "Dnevnik.hr" },
+                { url: "www.telegraf.rs", name: "Telegraf" },
+                { url: "www.net.hr", name: "Net.hr" },
+                { url: "www.oslobodjenje.ba", name: "Oslobođenje", }
             ]
         },
         {
@@ -175,7 +184,8 @@
                 { url: "www.youtube.com", name: "YouTube" },
                 { url: "search.yahoo.com", name: "Yahoo! Search" },
                 { url: "www.blekko.com", name: "Blekko" },
-                { url: "www.ask.com", name: "Ask", }
+                { url: "www.ask.com", name: "Ask", },
+                { url: "www.yandex.ru", name: "Yandex", }
             ]
         },
         {
