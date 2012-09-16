@@ -194,7 +194,7 @@
                 { url: "www.hotmail.com", name: "Hotmail", },
                 { url: "mail.yahoo.com", name: "Yahoo! Mail", },
                 { url: "www.gmx.com", name: "GMX", },
-                { url: "www.fastmail.com", name: "Fastmail", },
+                { url: "www.fastmail.fm", name: "Fastmail", },
                 { url: "www.Outlook.com", name: "Outlook", }
             ]
         },
