@@ -190,7 +190,7 @@
         {
             group: "Webmail",
             links: [
-                { url: "mail.google.com", name: "Gmail", favicon: "mail.google.com/favicon.ico" },
+                { url: "mail.google.com", name: "Gmail" },
                 { url: "www.hotmail.com", name: "Hotmail", },
                 { url: "mail.yahoo.com", name: "Yahoo! Mail", },
                 { url: "www.gmx.com", name: "GMX", },
