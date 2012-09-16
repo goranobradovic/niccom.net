@@ -233,7 +233,7 @@
                 { url: "books.google.com", name: "Google Books", },
                 { url: "www.wikihow.com", name: "wikiHow", },
                 { url: "www.howstuffworks.com", name: "HowStuffWorks", },
-                { url: "www.britannica.com", name: "Encyclopedia Britanica", },
+                { url: "www.britannica.com", name: "Britannica", },
                 { url: "www.wikia.com", name: "Wikia", },
                 { url: "www.squidoo.com", name: "Squidoo", },
                 { url: "www.scribd.com", name: "Scribd", }
@@ -242,7 +242,7 @@
         {
             group: "Korisno",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test.com", name: "Test", },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
