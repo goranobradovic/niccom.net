@@ -161,7 +161,7 @@
                 { url: "www.snapfiles.com", name: "Snap Files" },
                 { url: "www.100-downloads.com", name: "100 Downloads" },
                 { url: "www.giveawayoftheday.com", name: "Giveaway of the Day" },
-                { url: "www.download.com", name: "CNET Download }
+                { url: "www.download.com", name: "CNET Download" }
             ]
         },
         {
