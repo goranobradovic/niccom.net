@@ -26,6 +26,18 @@
             ]
         },
         {
+            group: "Banja Luka",
+            links: [
+                { url: "www.banjaluka.rs.ba", name: "Banja Luka },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.test.com", name: "Test" },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+            ]
+        },
+         {
             group: "Ženski Kutak",
             links: [
                 { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
