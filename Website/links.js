@@ -213,6 +213,18 @@
             ]
         },
         {
+            group: "Enciklopedije",
+            links: [
+                { url: "www.wikipedia.com", name: "Wikipedia", },
+                { url: "answers.yahoo.com", name: "Yahoo! Answers", },
+                { url: "www.about.com", name: "About", },
+                { url: "www.answers.com", name: "Answers", },
+                { url: "www.answers.com", name: "Answers", },
+                { url: "www.answers.com", name: "Answers", },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+            ]
+        },
+        {
             group: "Korisno",
             links: [
                 { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
