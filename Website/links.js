@@ -284,7 +284,8 @@
                 { url: "www.blic.net", name: "Blic" },
                 { url: "www.elta-kabel.com", name: "Elta Kabel" },
                 { url: "www.nsc.ba", name: "Navigo" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.inecco.net", name: "Inecco" },
+                { url: "www.teleklik.com", name: "Teleklik", }
             ]
         },
         {
