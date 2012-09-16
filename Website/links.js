@@ -31,8 +31,7 @@
                 { url: "blmap.inecco.net", name: "Mapa Banja Luke", favicon: "http://users.teol.net/~pcservis/misc/favicon.ico" },
                 { url: "www.banjaluka.rs.ba", name: "Banja Luka", favicon: "http://users.teol.net/~pcservis/misc/favicon.ico" },
                 { url: "www.banjaluka-tourism.com", name: "TOBL" },
-                { url: "www.bl-bioskop.ba", name: "BL Bioskop", favicon: "http://users.teol.net/~pcservis/misc/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.bl-bioskop.ba", name: "BL Bioskop", favicon: "http://users.teol.net/~pcservis/misc/favicon.ico" }
             ]
         },
          {
