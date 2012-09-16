@@ -285,6 +285,7 @@
                 { url: "www.elta-kabel.com", name: "Elta Kabel" },
                 { url: "www.nsc.ba", name: "Navigo" },
                 { url: "www.inecco.net", name: "Inecco" },
+                { url: "www.zona.ba", name: "Zona" },
                 { url: "www.teleklik.com", name: "Teleklik", }
             ]
         },
