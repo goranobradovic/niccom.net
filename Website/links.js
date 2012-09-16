@@ -10,17 +10,6 @@
                 { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
                 { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
                 { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
@@ -56,13 +45,6 @@
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
                 { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
                 { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
@@ -298,7 +280,10 @@
         {
             group: "Internet Provajderi",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.mtel.ba", name: "m:tel" },
+                { url: "www.blic.net", name: "Blic" },
+                { url: "www.elta-kabel.com", name: "Elta Kabel" },
+                { url: "www.nsc.ba", name: "Navigo" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
