@@ -35,28 +35,28 @@
          {
             group: "Ženski Kutak",
             links: [
-                { url: "www.test.com", name: "Test", },
+                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
         {
             group: "TV Program",
             links: [
-                { url: "www.test.com", name: "Test", }
+                { url: "www.test.com", name: "Test" }
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
         {
             group: "OnLine TV",
             links: [
-                { url: "www.test.com", name: "Test", },
+                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
         {
             group: "OnLine Radio",
             links: [
-                { url: "www.test.com", name: "Test", },
+                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
@@ -201,7 +201,7 @@
         {
             group: "Korisno",
             links: [
-                { url: "www.test.com", name: "Test", },
+                { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
