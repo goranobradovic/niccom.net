@@ -286,6 +286,7 @@
                 { url: "www.nsc.ba", name: "Navigo" },
                 { url: "www.inecco.net", name: "Inecco" },
                 { url: "www.zona.ba", name: "Zona" },
+                { url: "www.bdb.rs.ba", name: "BDB Wireless" },
                 { url: "www.teleklik.com", name: "Teleklik", }
             ]
         },
