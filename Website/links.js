@@ -145,8 +145,10 @@
         {
             group: "Društvene Mreže",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.facebook.com", name: "Facebook" },
+                { url: "www.twitter.com", name: "Twitter" },
+                { url: "www.linkedin.com", name: "LinkedIn" },
+                { url: "plus.google.com", name: "Google+" }
             ]
         },
         {
@@ -177,15 +179,23 @@
         {
             group: "Pretraživači",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.google.com", name: "Google" },
+                { url: "www.bing.com", name: "Bing" },
+                { url: "www.youtube.com", name: "YouTube" },
+                { url: "search.yahoo.com", name: "Yahoo! Search" },
+                { url: "www.blekko.com", name: "Blekko" },
+                { url: "www.ask.com", name: "Ask", }
             ]
         },
         {
             group: "Webmail",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.gmail.com", name: "Gmail", },
+                { url: "www.hotmail.com", name: "Hotmail", },
+                { url: "mail.yahoo.com", name: "Yahoo! Mail", },
+                { url: "www.gmx.com", name: "GMX", },
+                { url: "www.fastmail.com", name: "Fastmail", },
+                { url: "www.Outlook.com", name: "Outlook", }
             ]
         },
         {
