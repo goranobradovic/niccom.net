@@ -111,7 +111,6 @@ div.link-group, .feed-item {
 
 div#content a {
     color: black;
-    line-height: 16px;
     font-weight: bold;
 }
 
@@ -143,7 +142,10 @@ div#fb-feed, div#links {
     }
 
 div.group-container span {
-    font-size: 12px;
+    font-size: 14px;
+    height:21px;
+    display:inline-block;
+    vertical-align:bottom;
 }
 
 .item .title {
