@@ -327,6 +327,16 @@
             ]
         },
         {
+            group: "Fakulteti",
+            links: [
+                { url: "www.apeiron-uni.eu", name: "Apeiron", },
+                { url: "www.etfbl.net", name: "ETF BL", },
+                { url: "www.unibl.org", name: "Univerzitet BL", },
+                { url: "www.etfbl.net", name: "ETF BL", },
+                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+            ]
+        },
+        {
             group: "Internet Provajderi",
             links: [
                 { url: "www.mtel.ba", name: "m:tel" },
