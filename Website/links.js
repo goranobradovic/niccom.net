@@ -277,8 +277,17 @@
         {
             group: "Banke",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.volksbank-bl.ba", name: "VolksBank", },
+                { url: "www.novabanka.com", name: "Nova Banka", },
+                { url: "www.mfbanka.com", name: "MF Banka", },
+                { url: "www.hypo-alpe-adria.rs.ba", name: "Hypo Alpe Adria", },
+                { url: "www.nlbrazvojnabanka.com", name: "NLB Razvojna", },
+                { url: "www.bib.ba", name: "Balkan Investment", },
+                { url: "www.kombank-bl.com", name: "Komercijalna", },
+                { url: "www.pavlovic-banka.com", name: "Pavlović Banka, },
+                { url: "www.procreditbank.ba", name: "ProCredit", },
+                { url: "www.unicreditbank-bl.ba", name: "Unicredit BL", },
+                { url: "www.unicreditbank.ba", name: "Unicredit ZaBa", }
             ]
         },
         {
