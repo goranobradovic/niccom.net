@@ -330,10 +330,11 @@
             group: "Fakulteti",
             links: [
                 { url: "www.apeiron-uni.eu", name: "Apeiron", },
-                { url: "www.etfbl.net", name: "ETF BL", },
                 { url: "www.unibl.org", name: "Univerzitet BL", },
-                { url: "www.etfbl.net", name: "ETF BL", },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.univerzitetpim.com", name: "PIM", },
+                { url: "www.nubl.org", name: "NUBL", },
+                { url: "www.prometejbl.com", name: "Prometej", },
+                { url: "www.blc.edu.ba", name: "BLC", }
             ]
         },
         {
