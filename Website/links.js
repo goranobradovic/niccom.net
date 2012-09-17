@@ -304,8 +304,19 @@
         {
             group: "Hoteli",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.hotelbosna.com", name: "Bosna", },
+                { url: "www.hotelpalasbl.com", name: "Palas", },
+                { url: "www.hotelvidovic.com", name: "Vidović", },
+                { url: "www.hotel-cezar.com", name: "Cezar", },
+                { url: "www.hotelkaldera.com", name: "Kaldera", },
+                { url: "www.hotelcubic.com", name: "Ćubić", },
+                { url: "www.hotel-cetojevic.rs.ba", name: "Ćetojević", },
+                { url: "www.hoteltalija.com", name: "Talija", },
+                { url: "www.damjanhotel.com", name: "Damjan", },
+                { url: "www.hotelvilavrbas.com", name: "Vila Vrbas", },
+                { url: "www.hotelgrandbanjaluka.com", name: "Grand", },
+                { url: "www.moteldragana.com", name: "Dragana", },
+                { url: "www.moteldragana.com/hotelideja/", name: "Ideja", }
             ]
         },
         {
