@@ -112,8 +112,22 @@
         {
             group: "Torrenti",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.kat.ph", name: "KickAss", },
+                { url: "www.extratorrent.com", name: "ExtraTorrent", },
+                { url: "www.eztv.it", name: "EZTV", },
+                { url: "www.torrentreactor.net", name: "TorrentReactor", },
+                { url: "www.torrentdownloads.net", name: "TorrentDownloads", },
+                { url: "www.isohunt.com", name: "IsoHunt", },
+                { url: "www.torrentz.eu", name: "Torrentz", },
+                { url: "www.thepiratebay.se", name: "PirateBay", },
+                { url: "www.torrentcrazy.com", name: "TorrentCrazy", },
+                { url: "www.onlytorrents.com", name: "OnlyTorrents", },
+                { url: "www.bitsnoop.com", name: "BitSnoop", },
+                { url: "www.fenopy.eu", name: "Fenopy", },
+                { url: "www.torrentportal.com", name: "TorrentPortal", },
+                { url: "www.1337x.org", name: "1337x", },
+                { url: "www.seedpeer.me", name: "Seedpeer", },
+                { url: "www.scrapetorrent.com", name: "ScrapeTorrent", }
             ]
         },
         {
