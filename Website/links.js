@@ -10,17 +10,22 @@
                 { url: "www.glassrpske.com", name: "Glas Srpske" },
                 { url: "www.b92.net", name: "B92", },
                 { url: "www.vijesti.ba", name: "Vijesti.ba" },
+                { url: "www.novosti.rs", name: "Večernje Novosti" },
                 { url: "www.vecernji.hr", name: "Večernji List" },
                 { url: "www.vijesti.me", name: "Vijesti.me" },
                 { url: "www.frontal.rs", name: "Frontal" },
                 { url: "www.6yka.com", name: "Buka" },
                 { url: "www.jutarnji.hr", name: "Jutarnji list" },
+                { url: "www.pressonline.rs", name: "Press" },
                 { url: "www.klix.ba", name: "Klix" },
                 { url: "www.mondo.rs", name: "Mondo" },
                 { url: "www.dnevnik.hr", name: "Dnevnik.hr" },
                 { url: "www.telegraf.rs", name: "Telegraf" },
                 { url: "www.net.hr", name: "Net.hr" },
-                { url: "www.oslobodjenje.ba", name: "Oslobođenje", }
+                { url: "www.trojka.rs", name: "Trojka" },
+                { url: "www.oslobodjenje.ba", name: "Oslobođenje", },
+                { url: "www.smedia.rs", name: "SMedia" },
+                { url: "www.source.ba", name: "Source.ba", }
             ]
         },
         {
@@ -32,11 +37,20 @@
                 { url: "www.bl-bioskop.ba", name: "BL Bioskop", favicon: "http://users.teol.net/~pcservis/misc/favicon.ico" }
             ]
         },
-         {
+        {
             group: "Ženski Kutak",
             links: [
                 { url: "www.test.com", name: "Test" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+            ]
+        },
+        {
+            group: "Žuta Štampa",
+            links: [
+                { url: "www.pulsonline.rs", name: "Puls" },
+                { url: "www.tracara.com", name: "Tračara" },
+                { url: "www.opera-17.com", name: "Opera 17" },
+                { url: "www.komsinica.com", name: "Komšinica", }
             ]
         },
         {
@@ -132,27 +146,45 @@
             ]
         },
         {
-            group: "XXX",
+            group: "XXX Video",
             links: [
-                { url: "www.magicmovies.com", name: "Magic Movies" },
-                { url: "www.dreammovies.com", name: "Dream Movies" },
-                { url: "www.milfmovs.com", name: "Milf Movies" },
-                { url: "www.jizzle.com", name: "Jizzle Movies" },
-                { url: "www.gigantits.com", name: "GiganTits Movies" },
-                { url: "www.ass4all.com", name: "Ass4All Movies" },
-                { url: "www.teensnow.com", name: "Teen Snow Movies" }
+                { url: "www.magicmovies.com", name: "Magic" },
+                { url: "www.dreammovies.com", name: "Dream" },
+                { url: "www.milfmovs.com", name: "Milf" },
+                { url: "www.jizzle.com", name: "Jizzle" },
+                { url: "www.gigantits.com", name: "GiganTits" },
+                { url: "www.ass4all.com", name: "Ass4All" },
+                { url: "www.teensnow.com", name: "Teen Snow" },
+                { url: "www.xvideos.com", name: "xVideos" },
+                { url: "www.xhamster.com", name: "xHamster" },
+                { url: "www.porntube.com", name: "PornTube" },
+                { url: "www.pornhub.com", name: "PornHub" },
+                { url: "www.youporn.com", name: "YouPorn" },
+                { url: "www.redtube.com", name: "RedTube" },
+                { url: "www.tube8.com", name: "Tube 8" }
             ]
         },
         {
-            group: "Pretraživači",
+            group: "Web Pretraživači",
             links: [
                 { url: "www.google.com", name: "Google" },
                 { url: "www.bing.com", name: "Bing" },
-                { url: "www.youtube.com", name: "YouTube" },
                 { url: "search.yahoo.com", name: "Yahoo! Search" },
                 { url: "www.blekko.com", name: "Blekko" },
                 { url: "www.ask.com", name: "Ask", },
+                { url: "www.duckduckgo.com", name: "DuckDuckGo", },
                 { url: "www.yandex.ru", name: "Yandex", }
+            ]
+        },
+        {
+            group: "Video Pretraživači",
+            links: [
+                { url: "www.youtube.com", name: "YouTube" },
+                { url: "www.vimeo.com", name: "Vimeo" },
+                { url: "www.dailymotion.com", name: "Dailymotion" },
+                { url: "www.break.com", name: "Break" },
+                { url: "www.metacafe.com", name: "Metacafe" },
+                { url: "www.kobajagrande.com", name: "KobajaGrande", }
             ]
         },
         {
