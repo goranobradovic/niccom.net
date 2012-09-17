@@ -284,7 +284,7 @@
                 { url: "www.nlbrazvojnabanka.com", name: "NLB Razvojna", },
                 { url: "www.bib.ba", name: "Balkan Investment", },
                 { url: "www.kombank-bl.com", name: "Komercijalna", },
-                { url: "www.pavlovic-banka.com", name: "Pavlović Banka, },
+                { url: "www.pavlovic-banka.com", name: "Pavlović Banka", },
                 { url: "www.procreditbank.ba", name: "ProCredit", },
                 { url: "www.unicreditbank-bl.ba", name: "Unicredit BL", },
                 { url: "www.unicreditbank.ba", name: "Unicredit ZaBa", }
