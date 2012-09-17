@@ -282,10 +282,12 @@
                 { url: "www.mfbanka.com", name: "MF Banka", },
                 { url: "www.hypo-alpe-adria.rs.ba", name: "Hypo Alpe Adria", },
                 { url: "www.nlbrazvojnabanka.com", name: "NLB Razvojna", },
+                { url: "www.raiffeisenbank.ba", name: "Raiffeisen", },
                 { url: "www.bib.ba", name: "Balkan Investment", },
                 { url: "www.kombank-bl.com", name: "Komercijalna", },
                 { url: "www.pavlovic-banka.com", name: "Pavlović Banka", },
                 { url: "www.procreditbank.ba", name: "ProCredit", },
+                { url: "www.intesasanpaolobanka.ba", name: "Intesa SanPaolo", },
                 { url: "www.unicreditbank-bl.ba", name: "Unicredit BL", },
                 { url: "www.unicreditbank.ba", name: "Unicredit ZaBa", }
             ]
