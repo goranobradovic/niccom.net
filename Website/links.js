@@ -155,6 +155,8 @@
                 { url: "www.gigantits.com", name: "GiganTits" },
                 { url: "www.ass4all.com", name: "Ass4All" },
                 { url: "www.teensnow.com", name: "Teen Snow" },
+                { url: "www.cindymovies.com", name: "Cindy" },
+                { url: "www.xnxxmovies.com", name: "XNXX" },
                 { url: "www.xvideos.com", name: "xVideos" },
                 { url: "www.xhamster.com", name: "xHamster" },
                 { url: "www.porntube.com", name: "PornTube" },
