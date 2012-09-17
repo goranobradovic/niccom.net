@@ -6,6 +6,8 @@
                 { url: "www.index.hr", name: "Index" },
                 { url: "www.nezavisne.com", name: "Nezavisne", },
                 { url: "www.blic.rs", name: "Blic" },
+                { url: "www.banjalukalive.com", name: "Banja Luka Live" },
+                { url: "www.banjaluka.com", name: "Banjaluka.com" },
                 { url: "www.dnevniavaz.ba", name: "Dnevni Avaz", },
                 { url: "www.glassrpske.com", name: "Glas Srpske" },
                 { url: "www.b92.net", name: "B92", },
