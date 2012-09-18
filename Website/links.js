@@ -251,7 +251,9 @@
         {
             group: "Korisno",
             links: [
-                { url: "www.test.com", name: "Test" },
+                { url: "maps.google.com", name: "Google Mape" },
+                { url: "www.viamichelin.com", name: "Via Michelin" },
+                { url: "www.planplus.rs", name: "Plan Plus" },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
