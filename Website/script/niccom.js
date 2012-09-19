@@ -113,6 +113,7 @@ var Niccom = (function (Niccom) {
             isAnimated: true,
             isFitWidth: true
         });
+        setInterval(function () { $(".wall").masonry('reload'); }, 1000);
 
     };
     $(document).ready(init);

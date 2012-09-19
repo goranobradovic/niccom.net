@@ -68,7 +68,7 @@ var Niccom = (function (Niccom) {
         setInterval(self.FBFeed.refresh, 120000);
     };
     function postLoad() {
-        $("#fb-feed").masonry('reload');
+        setTimeout(function () { $(".wall").masonry('reload') }, 100);
     }
     $(document).ready(init);
     return self;
