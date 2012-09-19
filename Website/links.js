@@ -79,8 +79,9 @@
         {
             group: "OnLine Filmovi",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "milversite.net", name: "Milver TV Site", },
+                { url: "www.filmovizija.com", name: "Filmovizija", },
+                { url: "www.piraterijaw.at.ua", name: "Lud@k", }
             ]
         },
         {
