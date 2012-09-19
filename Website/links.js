@@ -121,6 +121,7 @@
                 { url: "www.extratorrent.com", name: "ExtraTorrent", },
                 { url: "www.eztv.it", name: "EZTV", },
                 { url: "www.torrentreactor.net", name: "TorrentReactor", },
+                { url: "h33t.com", name: "H33T", },
                 { url: "www.torrentdownloads.net", name: "TorrentDownloads", },
                 { url: "www.isohunt.com", name: "IsoHunt", },
                 { url: "www.torrentz.eu", name: "Torrentz", },
