@@ -87,8 +87,10 @@
         {
             group: "OnLine Igre",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.miniclip.com", name: "Mini Clip", },
+                { url: "igre247.net", name: "Igre 24/7", },
+                { url: "www.igrajonline.com", name: "Igraj Online", },
+                { url: "www.travian.com", name: "Travian", }
             ]
         },
         {
