@@ -260,7 +260,7 @@
             ]
         },
         {
-            group: "Korisno",
+            group: "Mape",
             links: [
                 { url: "maps.google.com", name: "Google Mape" },
                 { url: "www.viamichelin.com", name: "Via Michelin" },
