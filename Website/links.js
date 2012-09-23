@@ -33,7 +33,6 @@
         {
             group: "Banja Luka",
             links: [
-                { url: "blmap.inecco.net", name: "Mapa Banja Luke", },
                 { url: "www.banjaluka.rs.ba", name: "Banja Luka", },
                 { url: "www.banjaluka-tourism.com", name: "TOBL" },
                 { url: "www.bl-bioskop.ba", name: "BL Bioskop", }
@@ -262,10 +261,14 @@
         {
             group: "Mape",
             links: [
+                { url: "blmap.inecco.net", name: "Mapa Banja Luke", },
                 { url: "maps.google.com", name: "Google Mape" },
                 { url: "www.viamichelin.com", name: "Via Michelin" },
                 { url: "www.openstreetmap.org", name: "Open Street Map" },
                 { url: "www.planplus.rs", name: "Plan Plus" },
+                { url: "www.mapabeograda.net", name: "Mapa Beograda" },
+                { url: "www.karte.hr", name: "Karte.hr" },
+                { url: "www.karta-zagreba.com", name: "Karta Zagreba" },
                 { url: "www.bing.com/maps", name: "Bing Mape" },
                 { url: "maps.nokia.com", name: "Nokia Mape" },
                 { url: "www.navteq.com", name: "NAVTEQ",  }
