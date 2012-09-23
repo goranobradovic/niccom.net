@@ -255,10 +255,20 @@
         {
             group: "Korisno",
             links: [
+                { url: "www.test2.com", name: "Test", },
+                { url: "www.test2.com", name: "Test", }
+            ]
+        },
+        {
+            group: "Korisno",
+            links: [
                 { url: "maps.google.com", name: "Google Mape" },
                 { url: "www.viamichelin.com", name: "Via Michelin" },
+                { url: "www.openstreetmap.org", name: "Open Street Map" },
                 { url: "www.planplus.rs", name: "Plan Plus" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.bing.com/maps", name: "Bing Mape" },
+                { url: "maps.nokia.com", name: "Nokia Mape" },
+                { url: "www.navteq.com", name: "NAVTEQ",  }
             ]
         },
         {
