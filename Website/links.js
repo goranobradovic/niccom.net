@@ -17,6 +17,7 @@
                 { url: "www.vijesti.me", name: "Vijesti.me" },
                 { url: "www.frontal.rs", name: "Frontal" },
                 { url: "www.6yka.com", name: "Buka" },
+                { url: "www.vostok.rs", name: "Vostok" },
                 { url: "www.jutarnji.hr", name: "Jutarnji list" },
                 { url: "www.pressonline.rs", name: "Press" },
                 { url: "www.klix.ba", name: "Klix" },
