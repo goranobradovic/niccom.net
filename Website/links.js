@@ -230,7 +230,7 @@
         {
             group: "Grupni Popusti",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
+                { url: "www.ekupon.ba", name: "eKupon", },
                 { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
@@ -255,7 +255,7 @@
         {
             group: "Korisno",
             links: [
-                { url: "www.test2.com", name: "Test", },
+                { url: "www.imdb.com", name: "IMDB", },
                 { url: "www.test2.com", name: "Test", }
             ]
         },
