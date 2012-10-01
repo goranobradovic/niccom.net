@@ -269,11 +269,12 @@
                 { url: "maps.google.com", name: "Google Mape" },
                 { url: "www.viamichelin.com", name: "Via Michelin" },
                 { url: "www.openstreetmap.org", name: "Open Street Map" },
+                { url: "www.bing.com/maps", name: "Bing Mape" },
                 { url: "www.planplus.rs", name: "Plan Plus" },
                 { url: "www.mapabeograda.net", name: "Mapa Beograda" },
                 { url: "www.karte.hr", name: "Karte.hr" },
                 { url: "www.karta-zagreba.com", name: "Karta Zagreba" },
-                { url: "www.bing.com/maps", name: "Bing Mape" },
+                { url: "www.mapquest.com", name: "Map Quest" },
                 { url: "maps.nokia.com", name: "Nokia Mape" },
                 { url: "www.navteq.com", name: "NAVTEQ",  }
             ]
