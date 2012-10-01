@@ -289,8 +289,9 @@
         {
             group: "Forumi",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.banjalukaforum.com", name: "BL Forum", },
+                { url: "forum.burek.com", name: "Burek", },
+                { url: "www.forum.hr", name: "Forum.hr", }
             ]
         },
         {
