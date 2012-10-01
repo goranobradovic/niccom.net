@@ -72,8 +72,12 @@
         {
             group: "OnLine Radio",
             links: [
-                { url: "www.test.com", name: "Test" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.bigradiobl.com", name: "Big" },
+                { url: "www.kontaktradio.com", name: "Kontakt" },
+                { url: "www.nesradio.com", name: "Nes" },
+                { url: "www.unoradiobl.com", name: "Uno" },
+                { url: "www.radioigokea.info", name: "Igokea" },
+                { url: "www.vikom.tv", name: "Vikom", favicon: "http://www.niccom.net/favicon.ico" }
             ]
         },
         {
