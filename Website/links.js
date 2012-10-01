@@ -371,10 +371,15 @@
             ]
         },
         {
-            group: "Tržni Centri i Prodavnice",
+            group: "TC i Prodavnice",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "tcverno.com", name: "Verno", },
+                { url: "mbl.mercator.ba", name: "Merkator", },
+                { url: "tempo.ba", name: "Tempo", },
+                { url: "www.obi.ba", name: "OBI", },
+                { url: "www.fis-bih.com", name: "FiS", },
+                { url: "www.konzum.co.ba", name: "Konzum", },
+                { url: "www.maxi.ba", name: "Maxi", }
             ]
         },
         {}, {}
