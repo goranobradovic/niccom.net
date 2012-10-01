@@ -318,10 +318,15 @@
             ]
         },
         {
-            group: "Restorani i Dostave Hrane",
+            group: "Restorani",
             links: [
-                { url: "www.test.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "yachtingclubbl.com", name: "Yachting", },
+                { url: "www.restoranmarcopolo.com", name: "Marco Polo", },
+                { url: "www.malastanica.com", name: "Mala Stanica", },
+                { url: "www.staraada.ba", name: "Stara Ada", },
+                { url: "www.restoranintegra.com", name: "Integra", },
+                { url: "www.actros-pizzeria.com", name: "Actros", },
+                { url: "www.alasbl.com", name: "Alas", }
             ]
         },
         {
