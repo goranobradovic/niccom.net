@@ -230,8 +230,11 @@
         {
             group: "Grupni Popusti",
             links: [
+                { url: "www.ludipopust.com", name: "Ludi Popust", },
                 { url: "www.ekupon.ba", name: "eKupon", },
-                { url: "www.test2.com", name: "Test", favicon: "http://www.niccom.net/favicon.ico" }
+                { url: "www.kupigrupno.com", name: "Kupi Grupno", },
+                { url: "www.tiket.ba", name: "Tiket", },
+                { url: "www.popustmarket.com", name: "Popust Market", }
             ]
         },
         {
