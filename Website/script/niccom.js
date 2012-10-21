@@ -106,14 +106,18 @@ var Niccom = (function (Niccom) {
                 self.userSettings.tab = ui.index;
                 saveSettings();
                 var wall = $(this).find(".masonry").eq(ui.index);
-                setTimeout(function () { wall.masonry('reload'); }, 5);
+                setTimeout(function () { wall.masonry('reload'); }, 1);
             }
         });
         $(".wall").masonry({
             isAnimated: true,
             isFitWidth: true
         });
-        setInterval(function () { $(".wall").masonry('reload'); }, 1000);
+        setInterval(function () {
+            var selected = $(".tabs").tabs("option", "selected");
+            $(".tabs").children(":eq("+selected+")").filter(".wall").masonry('reload');
+        }, 1000);
+
 
     };
     $(document).ready(init);

@@ -1,24 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="favicon.ico">
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-    <meta property="og:title" content="PC Servis Niccom" />
+    <meta property="og:title" content="PC Servis NICCOM" />
     <meta property="og:type" content="" />
-    <meta property="og:url" content="https://graph.facebook.com/pc.servis.niccom" />
-    <meta property="og:image" content="https://graph.facebook.com/pc.servis.niccom/picture" />
-    <meta property="og:site_name" content="PC Servis Niccom" />
+    <meta property="og:url" content="http://graph.facebook.com/pc.servis.niccom" />
+    <meta property="og:image" content="http://graph.facebook.com/pc.servis.niccom/picture" />
+    <meta property="og:site_name" content="PC Servis NICCOM" />
     <meta property="fb:admins" content="100001139495518" />
     <title>PC Servis - Banja Luka - +387 65 696 696</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_180x150.css">
     <link rel="stylesheet" type="text/css" href="css/site.css" />
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
     <!--<script type="text/javascript" src="script/jquery-1.8.0.min.js"></script>-->
     <script type="text/javascript" src="script/knockout-2.1.0.js"></script>
     <script type="text/javascript" src="links.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/goranobradovic/niccom.net/master/Website/links.js"></script>
     <script type="text/javascript" src="script/fbUtils.js"></script>
     <script type="text/javascript" src="script/niccom.js"></script>
     <script type="text/javascript" src="script/jquery.cookie.js"></script>
@@ -37,78 +35,73 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div style="text-align: center;">
-        <div id="search-engine" role="search">
-            <div id="engines" class="engines">
-                <div id="search-engine-google">
-                    <a href="http://www.google.com/ncr">
-                        <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png">
-                    </a>
-                    <br>
-                    <form method="get" action="http://www.google.com/search">
-                    <input name="q" size="61" maxlength="255" value="" type="text">
-                    <br>
-                    <br>
-                    <input value="Google Pretraga" type="submit">
-                    <br>
-                    </form>
-                </div>
-                <div id="search-engine-bing">
-                    <a href="http://www.bing.com/">
-                        <img src="images/bing.jpg" alt="bing" border="0"><br>
-                    </a>
-                    <form method="get" action="http://www.bing.com/search">
-                    <input name="cp" value="ISO-8859-1" type="hidden">
-                    <input name="FORM" value="FREEWS" type="hidden">
-                    <table style="background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;">
-                        <tbody>
-                            <tr>
-                                <td style="text-align: center;">
-                                    <div style="text-align: left;">
-                                        <input name="q" size="61" type="text"><br>
-                                        <br>
-                                    </div>
-
-                                    <input value="Bing Pretraga" type="submit">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </form>
-                </div>
+    <div id="niccom-contents" role="region">
+        <div id="columnsContainer">
+            <div id="servis">
+                <img style="width: 150px; height: 134px;" alt="PC Servis" src="images/logo.jpg"><br>
+                <img style="width: 180px; height: 211px;" alt="Info" src="images/info.jpg"><br>
+                <a href="images/map.jpg"><span style="text-decoration: underline;">
+                    <img style="border: 0px solid; width: 180px; height: 179px;" alt="Mapa" src="images/map-mini.jpg"></span></a><br>
+                <img style="width: 180px; height: 264px;" alt="Servis i prodaja" src="images/info2.jpg"><br>
+                <div class="fb-like-box" data-href="http://www.facebook.com/pc.servis.niccom" data-width="185" data-height="325" data-show-faces="true" data-stream="false" data-header="true"></div>
             </div>
-            <ul class="search-engines-pagination">
-                <li>
-                    <a href="#google">
-                        <img alt="Google" src="images/google.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#bing">
-                        <img alt="Bing" src="images/bing.jpg">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="niccom-contents" role="region">
-            <div id="columnsContainer">
-                <div id="servis">
-                    <img style="width: 150px; height: 134px;" alt="PC Servis" src="images/logo.jpg"><br>
-                    <img style="width: 180px; height: 211px;" alt="Info" src="images/info.jpg"><br>
-                    <a href="images/map.jpg"><span style="text-decoration: underline;">
-                        <img style="border: 0px solid; width: 180px; height: 179px;" alt="Mapa" src="images/map-mini.jpg"></span></a><br>
-                    <img style="width: 180px; height: 264px;" alt="Servis i prodaja" src="images/info2.jpg"><br>
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pc.servis.niccom" data-width="185" data-height="325" data-show-faces="true" data-stream="false" data-header="true"></div>
+            <div id="content" class="tabs">
+                <ul>
+                    <li><a href="#links">Linkovi</a></li>
+                    <li><a href="#fb-feed">Vijesti</a></li>
+                    <li><a href="#google"><img alt="Google" src="images/google.png"></a></li>
+                    <li><a href="#bing"><img src="images/bing.jpg" alt="bing" border="0"></a></li>
+                    <li><a href="#banjaluka">BL Info</a></li>
+                    <li><a href="#weather-bl">Vrijeme u BL</a></li>
+                </ul>
+                <div id="links" class="group-container wall" data-bind="template: {name:'link-template', foreach:groups}">
                 </div>
-                <div id="content" class="tabs">
-                    <ul>
-                        <li><a href="#links">Linkovi</a></li>
-                        <li><a href="#fb-feed">Vijesti</a></li>
-                    </ul>
-                    <div id="links" class="group-container wall" data-bind="template: {name:'link-template', foreach:groups}">
+                <div id="fb-feed" class="group-container wall" data-pageid="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
+                </div>
+                <div id="google" class="group-container">
+                    <div id="search-engine-google">
+                        <a href="http://www.google.com/ncr">
+                            <img style="width: 264px; height: 90px;" alt="Google" src="images/google.png">
+                        </a>
+                        <br>
+                        <form method="get" action="http://www.google.com/search">
+                        <input name="q" size="61" maxlength="255" value="" type="text">
+                        <br>
+                        <br>
+                        <input value="Google Pretraga" type="submit">
+                        <br>
+                        </form>
                     </div>
-                    <div id="fb-feed" class="group-container wall" data-pageid="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
+                </div>
+                <div id="bing" class="group-container">
+                    <div id="search-engine-bing">
+                        <a href="http://www.bing.com/">
+                            <img src="images/bing.jpg" alt="bing" border="0"><br>
+                        </a>
+                        <form method="get" action="http://www.bing.com/search">
+                        <input name="cp" value="ISO-8859-1" type="hidden">
+                        <input name="FORM" value="FREEWS" type="hidden">
+                        <table style="background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <div style="text-align: left;">
+                                            <input name="q" size="61" type="text"><br>
+                                            <br>
+                                        </div>
+
+                                        <input value="Bing Pretraga" type="submit">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
                     </div>
+                </div>
+                <div id="banjaluka" class="group-container">
+                </div>
+                <div id="weather-bl" class="group-container">
+                    Biće lijepo sunčano i mrzne
                 </div>
                 <script type="text/html" id="link-template">
                     <div class="link-group item" data-bind="style:{'background-color':color}">
@@ -132,35 +125,35 @@
                         </a>
                     </div>
                 </script>
-                <div id="weather">
-                    <!--<script type="text/javascript" src="http://voap.weather.com/weather/oap/BKXX0001?template=GENXV&par=3000000007&unit=1&key=twciweatherwidget"></script>-->
-                    <div style="font: 10px Tahoma; padding: 3px;"><a style="color: #000000; text-decoration: none" href="http://freemeteo.com">Weather by Freemeteo.com</a></div>
-                    <script>
-                        //Live weather feeds by freemeteo.com 
-                        //The use of this script is bound by Freemeteo?s Live Feed Service Agreement, as is published in the following url: http://www.freemeteo.com/default.asp?pid=178&la=1
-                        // You are not allowed to change or delete any part of this script.
-                        // Main body background color : FFFFFF
-                        // Main body fonts color : 000000
-                        // Header/Footer background color : 6699FF
-                        // Header/Footer fonts color : FFFFFF
-                        cIfrm = "2";
-                        gid = "818965_20120909_183544";
-                    </script>
-                    <script src="http://www.freemeteo.com/templates/default/HTfeeds.js" type="text/javascript"></script>
-                    <div id="weather-slides">
-                        <div class="slides_container">
-                        </div>
+            </div>
+            <div id="weather">
+                <!--<script type="text/javascript" src="http://voap.weather.com/weather/oap/BKXX0001?template=GENXV&par=3000000007&unit=1&key=twciweatherwidget"></script>-->
+                <div style="font: 10px Tahoma; padding: 3px;"><a style="color: #000000; text-decoration: none" href="http://freemeteo.com">Weather by Freemeteo.com</a></div>
+                <script>
+                    //Live weather feeds by freemeteo.com 
+                    //The use of this script is bound by Freemeteo?s Live Feed Service Agreement, as is published in the following url: http://www.freemeteo.com/default.asp?pid=178&la=1
+                    // You are not allowed to change or delete any part of this script.
+                    // Main body background color : FFFFFF
+                    // Main body fonts color : 000000
+                    // Header/Footer background color : 6699FF
+                    // Header/Footer fonts color : FFFFFF
+                    cIfrm = "2";
+                    gid = "818965_20120909_183544";
+                </script>
+                <script src="http://www.freemeteo.com/templates/default/HTfeeds.js" type="text/javascript"></script>
+                <div id="weather-slides">
+                    <div class="slides_container">
                     </div>
-                    <!--<div class="fb-facepile" data-href="https://www.facebook.com/pc.servis.niccom" data-max-rows="5" data-width="180"></div>-->
-                    <!--<div class="fb-like" data-href="https://www.facebook.com/pc.servis.niccom" data-send="false" data-layout="button_count" data-width="180" data-show-faces="false"></div>-->
-                    <br>
                 </div>
+                <!--<div class="fb-facepile" data-href="http://www.facebook.com/pc.servis.niccom" data-max-rows="5" data-width="180"></div>-->
+                <!--<div class="fb-like" data-href="http://www.facebook.com/pc.servis.niccom" data-send="false" data-layout="button_count" data-width="180" data-show-faces="false"></div>-->
+                <br>
             </div>
         </div>
-        <div id="footer">
-            <div>&copy; 2012 PC Servis</div>
+    </div>
+    <div id="footer">
+        <div>&copy; 2012 PC Servis</div>
 
-        </div>
     </div>
 
     <script type="text/javascript">

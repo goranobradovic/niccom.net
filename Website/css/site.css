@@ -1,4 +1,4 @@
-﻿@import url("smoothness/jquery-ui-1.8.22.custom.css");
+﻿@import url("niccom-theme/jquery-ui-1.9.0.custom.min.css");
 
 body, .ui-widget {
     font-family: Calibri;
@@ -130,7 +130,7 @@ div#fb-feed > div.feed-item {
     float: left;
     vertical-align: top;
     border: 1px solid #999;
-    text-align:left;
+    text-align: left;
 }
 
 .feed-item a {
@@ -139,28 +139,32 @@ div#fb-feed > div.feed-item {
 .feed-item img {
     max-width: 100px;
     margin-right: 5px;
-    float:left;
+    float: left;
 }
 
 .feed-item span, .feed-item img {
     display: inline;
 }
 
-.feed-item span.title {
-    width: 100%;
-    display:block;
-    border-bottom:1px solid #ddd;
-    padding: 0px;
-    margin: 0 0 5px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align:center;
-}
+    .feed-item span.title {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #ddd;
+        padding: 0px;
+        margin: 0 0 5px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
 
-.feed-item span.description {
-    font-size: 12px;
-    font-weight: normal;
-    color: #222;
+    .feed-item span.description {
+        font-size: 12px;
+        font-weight: normal;
+        color: #222;
+    }
+
+div#content > div.group-container {
+    padding: 0;
 }
 
 div.group-container .link-group span {
@@ -186,4 +190,14 @@ div.group-container .link-group span {
 
 ul.ui-tabs-nav {
     font-size: 15px;
+    background-color: transparent;
 }
+
+    ul.ui-tabs-nav li a {
+        min-height: 75px;
+        background-color: transparent;
+    }
+
+        ul.ui-tabs-nav li img {
+            width: 150px;
+        }
