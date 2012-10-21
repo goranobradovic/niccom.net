@@ -194,10 +194,10 @@ ul.ui-tabs-nav {
 }
 
     ul.ui-tabs-nav li a {
-        min-height: 75px;
+        min-height: 50px;
         background-color: transparent;
     }
 
         ul.ui-tabs-nav li img {
-            width: 150px;
+            width: 140px;
         }

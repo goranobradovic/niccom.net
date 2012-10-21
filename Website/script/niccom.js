@@ -52,7 +52,10 @@ var Niccom = (function (Niccom) {
         };
     }
     function adjustWidth() {
-        $("#content").width($(window).width() - 500);
+        var contentWidth = $(window).width() - 280;
+        $("#content").width(contentWidth);
+        var tabImgs = $("ul.ui-tabs-nav li img");
+        tabImgs.width((contentWidth / tabImgs.length) - (tabImgs.length + 2) * 5)
     }
     function saveSettings() {
         $.cookie(self.user_settings_cookie, JSON.stringify(self.userSettings));
@@ -66,7 +69,9 @@ var Niccom = (function (Niccom) {
         ko.applyBindings(self.LinksViewModel, $("#links")[0]);
 
         $(window).resize(adjustWidth);
-        adjustWidth();
+        var interval = setInterval(adjustWidth, 200);
+        setInterval(function () { clearInterval(interval); }, 5000);
+        
 
         $.getJSON("https://graph.facebook.com/pc.servis.niccom/", function (data) {
             self.info = data;
