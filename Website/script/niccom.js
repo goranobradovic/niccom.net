@@ -52,7 +52,7 @@ var Niccom = (function (Niccom) {
         };
     }
     function adjustWidth() {
-        var contentWidth = $(window).width() - 280;
+        var contentWidth = $(window).width() - 10;
         $("#content").width(contentWidth);
         var tabImgs = $("ul.ui-tabs-nav li img");
         tabImgs.width((contentWidth / tabImgs.length) - (tabImgs.length + 2) * 5)
@@ -71,7 +71,7 @@ var Niccom = (function (Niccom) {
         $(window).resize(adjustWidth);
         var interval = setInterval(adjustWidth, 200);
         setInterval(function () { clearInterval(interval); }, 5000);
-        
+
 
         $.getJSON("https://graph.facebook.com/pc.servis.niccom/", function (data) {
             self.info = data;
@@ -110,18 +110,18 @@ var Niccom = (function (Niccom) {
             select: function (event, ui) {
                 self.userSettings.tab = ui.index;
                 saveSettings();
-                var wall = $(this).find(".masonry").eq(ui.index);
-                setTimeout(function () { wall.masonry('reload'); }, 1);
+                setTimeout(rebuildWall);
             }
         });
         $(".wall").masonry({
             isAnimated: true,
             isFitWidth: true
         });
-        setInterval(function () {
-            var selected = $(".tabs").tabs("option", "selected");
-            $(".tabs").children(":eq("+selected+")").filter(".wall").masonry('reload');
-        }, 1000);
+        function rebuildWall() {
+            var selected = $(".tabs").tabs("option", "selected") + 1;
+            $(".tabs").children(":eq(" + selected + ")").filter(".wall").masonry('reload');
+        }
+        setInterval(rebuildWall, 10000);
 
 
     };
