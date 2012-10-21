@@ -76,7 +76,7 @@ var Niccom = (function (Niccom) {
         $.getJSON("https://graph.facebook.com/pc.servis.niccom/", function (data) {
             self.info = data;
         });
-        self.userSettings = JSON.parse($.cookie(self.user_settings_cookie)) || { search: 1, tab: 0 };
+        self.userSettings = JSON.parse($.cookie(self.user_settings_cookie)) || { search: 1, tab: 1 };
 
         $('div#search-engine').slides({
             //effect: 'slide, fade',
