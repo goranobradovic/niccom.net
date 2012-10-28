@@ -60,10 +60,51 @@
                         <img alt="Info" src="images/info.gif"></span></a><br>
                     <div class="fb-like-box" data-href="http://www.facebook.com/pc.servis.niccom" data-width="185" data-height="325" data-show-faces="true" data-stream="false" data-header="true"></div>
                 </div>
-                <div id="links" class="group-container wall" data-bind="template: {name:'link-template', foreach:groups}">
+                <div id="links" class="group-container">
+                    <ul data-bind="foreach:groups">
+                        <li><a data-bind="text:name, attr:{ href:'#' + normalizedName }, click: open"></a></li>
+                    </ul>
+                    <div class="link-group item" data-bind="with:openedGroup">
+                        <span class="title" data-bind="text: name"></span>
+                        <ul data-bind="foreach:links">
+                            <li>
+                                <a href="#" data-bind="attr:{href:url}" target="_blank">
+                                    <img data-bind="attr:{src:favicon}" src="#" alt="" />
+                                    <span data-bind="text:name"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ko template: {name:'link-template', foreach:groups} 
+                    <!-- /ko -->
+                    <!--<div data-bind="template: {name:'link-template', foreach:groups}">
+                    </div>-->
                 </div>
+                <script type="text/html" id="link-template">
+                    <div class="link-group item" data-bind="style:{'background-color': color }, attr:{id: normalizedName }">
+                        <span class="title" data-bind="text: name"></span>
+                        <ul data-bind="foreach:links">
+                            <li>
+                                <a href="#" data-bind="attr:{href:url}" target="_blank">
+                                    <img data-bind="attr:{src:favicon}" src="#" alt="" />
+                                    <span data-bind="text:name"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </script>
                 <div id="fb-feed" class="group-container wall" data-pageid="211109072292192" data-bind="template: {name:'fb-feed-template', foreach:feedItems}">
                 </div>
+                <script type="text/html" id="fb-feed-template">
+                    <div class="feed-item item">
+                        <a href="#" data-bind="attr:{href:link}">
+                            <span class="title" data-bind="text: name"></span>
+                            <img src="#" data-bind="attr:{src:picture}, visible:picture" />
+                            <span class="description" data-bind="html: description"></span>
+                        </a>
+                    </div>
+                </script>
                 <div id="google" class="group-container">
                     <div id="search-engine-google" class="middle">
                         <a href="http://www.google.com/ncr">
@@ -71,11 +112,11 @@
                         </a>
                         <br>
                         <form method="get" target="_blank" action="http://www.google.com/search">
-                        <input name="q" size="61" maxlength="255" value="" type="text">
-                        <br>
-                        <br>
-                        <input value="Google Pretraga" type="submit">
-                        <br>
+                            <input name="q" size="61" maxlength="255" value="" type="text">
+                            <br>
+                            <br>
+                            <input value="Google Pretraga" type="submit">
+                            <br>
                         </form>
                     </div>
                 </div>
@@ -85,22 +126,22 @@
                             <img alt="Bing" src="images/bing2.png" border="0"><br>
                         </a>
                         <form method="get" target="_blank" action="http://www.bing.com/search">
-                        <input name="cp" value="ISO-8859-1" type="hidden">
-                        <input name="FORM" value="FREEWS" type="hidden">
-                        <table style="background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;">
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center;">
-                                        <div style="text-align: left;">
-                                            <input name="q" size="61" type="text"><br>
-                                            <br>
-                                        </div>
+                            <input name="cp" value="ISO-8859-1" type="hidden">
+                            <input name="FORM" value="FREEWS" type="hidden">
+                            <table style="background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="text-align: left;">
+                                                <input name="q" size="61" type="text"><br>
+                                                <br>
+                                            </div>
 
-                                        <input value="Bing Pretraga" type="submit">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                            <input value="Bing Pretraga" type="submit">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </form>
                     </div>
                 </div>
@@ -130,28 +171,6 @@
                     <!--<div class="fb-facepile" data-href="http://www.facebook.com/pc.servis.niccom" data-max-rows="5" data-width="180"></div>-->
                     <!--<div class="fb-like" data-href="http://www.facebook.com/pc.servis.niccom" data-send="false" data-layout="button_count" data-width="180" data-show-faces="false"></div>-->
                 </div>
-                <script type="text/html" id="link-template">
-                    <div class="link-group item" data-bind="style:{'background-color':color}">
-                        <span class="title" data-bind="text: name"></span>
-                        <ul data-bind="foreach:links">
-                            <li>
-                                <a href="#" data-bind="attr:{href:url}" target="_blank">
-                                    <img data-bind="attr:{src:favicon}" src="#" alt="" />
-                                    <span data-bind="text:name"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </script>
-                <script type="text/html" id="fb-feed-template">
-                    <div class="feed-item item">
-                        <a href="#" data-bind="attr:{href:link}">
-                            <span class="title" data-bind="text: name"></span>
-                            <img src="#" data-bind="attr:{src:picture}, visible:picture" />
-                            <span class="description" data-bind="html: description"></span>
-                        </a>
-                    </div>
-                </script>
             </div>
         </div>
     </div>

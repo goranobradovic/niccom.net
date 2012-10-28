@@ -213,3 +213,20 @@ ul.ui-tabs-nav {
         ul.ui-tabs-nav li img {
             width: 140px;
         }
+
+
+#links > * {
+    float:left;
+    width:49%;
+}
+
+#links > div.link-group.item > ul {
+    width:100%;
+}
+
+    #links > ul > li, #links > div > ul > li {
+        width:150px;
+        display:inline-block;
+    }
+
+

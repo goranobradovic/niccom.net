@@ -21,14 +21,18 @@ var Niccom = (function (Niccom) {
         self.url = "http://" + data.url;
         self.name = data.name;
         self.favicon = data.favicon || ("http://" + data.url + "/favicon.ico");
+        return self;
     }
 
-    function GroupViewModel(data) {
+    function GroupViewModel(data, openCallback) {
         var self = this;
         self.name = data.group;
-        self.color = data.color;
+        self.color = data.color || 'transparent';
         var links = $.map(data.links || [], function (item) { return new LinkViewModel(item) });
+        self.normalizedName =  (data.group || '').toLowerCase().replace(/ /g, '_');
         self.links = ko.observableArray(links);
+        self.open = openCallback;
+        return self;
     }
 
     function LinksViewModel(data) {
@@ -36,20 +40,16 @@ var Niccom = (function (Niccom) {
         /// Links submodule of the Niccom
         /// </summary>
         var self = this;
-        var groups = $.map(data.groups, function (item) { return new GroupViewModel(item) });
+        self.openedGroup = ko.observable({});
+        self.openGroup = function (group) {
+            self.openedGroup(group);
+        }
+        var groups = $.map(data.groups, function (item) { return new GroupViewModel(item, self.openGroup) });
         self.groups = ko.observableArray(groups);
+        self.openedGroup(self.groups[0]);
 
-        var _refresh = function () {
-            /// <summary>
-            /// refresh method in Niccom.Links
-            /// </summary>
-        }
-        if (links) {
-        }
-        return {
-            /// Niccom.refresh.refresh()
-            refresh: _refresh
-        };
+
+        return self;
     }
     function adjustWidth() {
         var contentWidth = $(window).width() - 10;
@@ -65,7 +65,7 @@ var Niccom = (function (Niccom) {
         /// This places result of Links() execution under
         /// Niccom.
         /// </summary>
-        self.LinksViewModel = self.LinksViewModel || LinksViewModel(links);
+        self.LinksViewModel = self.LinksViewModel || new LinksViewModel(links);
         ko.applyBindings(self.LinksViewModel, $("#links")[0]);
 
         $(window).resize(adjustWidth);
