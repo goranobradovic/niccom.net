@@ -11,7 +11,7 @@ var fbUtils = (function (fbUtils) {
         /// </summary>
         var self = this;
         self.oauthUrl = "https://graph.facebook.com/oauth/access_token?grant_type=client_credentials&client_id={appId}&client_secret={secret}";
-        self.feedUrl = "https://graph.facebook.com/{pageId}/feed&{token}";
+        self.feedUrl = "https://graph.facebook.com/{pageId}?feed&{token}";
         var _get = function (appId, secret, pageId, callback) {
             /// <summary>
             /// get method in fbUtils.Feed
