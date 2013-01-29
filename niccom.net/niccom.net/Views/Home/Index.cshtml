@@ -1,0 +1,19 @@
+﻿@model IEnumerable<niccom.net.Models.Tab>
+<div class="navbar">
+    <ul class="nav nav-tabs">
+        @foreach (var tab in Model)
+        {
+            <li>
+                <a href="#@tab.Name.Replace(" ", string.Empty)" data-toggle="tab">
+                    <img alt="@tab.Name" src="@tab.Icon" title="@tab.Tooltip"></a>
+            </li>
+        }
+    </ul>
+</div>
+<div class="clearfix"></div>
+<div class="tab-content">
+    @foreach (var tab in Model)
+    {
+        <div class="tab-pane" id="@tab.Name.Replace(" ", string.Empty)">@tab.Tooltip</div>
+    }
+</div>

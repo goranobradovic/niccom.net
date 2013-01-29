@@ -1,0 +1,48 @@
+@import "less/bootstrap.less";
+@import "less/responsive.less";
+
+body {
+}
+
+#body {
+    margin: 10px auto 0 auto;
+}
+
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav {
+        li:not(.active) {
+            a {
+                padding-left: 10%;
+                padding-right: 10%;
+
+                &:hover, &:focus {
+                    background-color: white;
+                    padding-left: 0%;
+
+                    img {
+                        zoom: 120%;
+                    }
+                }
+            }
+        }
+
+        li.active {
+            a {
+                background-color: @white;
+                padding-left: 0%;
+                padding-right: 0%;
+
+                img {
+                    zoom: 120%;
+                }
+
+                &:hover, &:focus {
+                    background-color: @white;
+                }
+            }
+        }
+    }
+}
