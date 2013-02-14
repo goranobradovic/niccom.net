@@ -9,6 +9,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using niccom.net.Filters;
 using niccom.net.Models;
+using niccom.net.Models.db;
 
 namespace niccom.net.Controllers
 {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using niccom.net.Models;
+using niccom.net.Models.db;
 
 namespace niccom.net.Controllers
 {

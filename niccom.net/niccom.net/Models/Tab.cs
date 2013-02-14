@@ -5,6 +5,12 @@ using System.Web;
 
 namespace niccom.net.Models
 {
+    public enum TabContentType
+    {
+        Html,
+        Partial
+    }
+
     public class Tab
     {
         /// <summary>
@@ -38,5 +44,21 @@ namespace niccom.net.Models
         /// The tooltip.
         /// </value>
         public string Tooltip { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type.
+        /// </summary>
+        /// <value>
+        /// The type.
+        /// </value>
+        public TabContentType Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets the content.
+        /// </summary>
+        /// <value>
+        /// The content.
+        /// </value>
+        public string Content { get; set; }
     }
 }

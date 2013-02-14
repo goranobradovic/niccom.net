@@ -1,5 +1,6 @@
-﻿@model IEnumerable<niccom.net.Models.Tab>
-<div class="navbar">
+﻿@using niccom.net.Models
+@model IEnumerable<niccom.net.Models.Tab>
+<div class="navbar" style="width:@(Model.Count() * 165)px">
     <ul class="nav nav-tabs">
         @foreach (var tab in Model)
         {
@@ -14,6 +15,28 @@
 <div class="tab-content">
     @foreach (var tab in Model)
     {
-        <div class="tab-pane" id="@tab.Name.Replace(" ", string.Empty)">@tab.Tooltip</div>
+        <div class="tab-pane" id="@tab.Name.Replace(" ", string.Empty)">
+            @switch (tab.Type)
+            {
+                case TabContentType.Html:
+                @Html.Raw(tab.Content)
+                    break;
+                case TabContentType.Partial:
+                @Html.Partial(tab.Content)
+                    break;
+                default:
+                @Html.Encode("Unsupported content type")
+                    break;
+
+            }
+        </div>
     }
 </div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div.navbar ul.nav li:first a").tab("show");
+        });
+    </script>
+}

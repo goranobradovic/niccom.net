@@ -7616,12 +7616,15 @@ a.badge:hover {
   margin-right: auto;
 }
 .navbar .nav li:not(.active) a {
-  padding: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 15%;
 }
 .navbar .nav li:not(.active) a:hover,
 .navbar .nav li:not(.active) a:focus {
   background-color: white;
   padding-left: 0%;
+  padding-top: 5%;
 }
 .navbar .nav li:not(.active) a:hover img,
 .navbar .nav li:not(.active) a:focus img {

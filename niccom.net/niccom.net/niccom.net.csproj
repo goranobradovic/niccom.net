@@ -214,13 +214,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Bookmark.cs" />
+    <Compile Include="Models\db\NiccomInitializer.cs" />
     <Compile Include="Models\Tab.cs" />
-    <Compile Include="Models\TabContent.cs" />
     <Compile Include="Models\TodoItemDto.cs" />
     <Compile Include="Models\TodoListDto.cs" />
     <Compile Include="Models\TodoList.cs" />
     <Compile Include="Models\TodoItem.cs" />
-    <Compile Include="Models\NiccomContext.cs" />
+    <Compile Include="Models\db\NiccomContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +356,7 @@
     <Content Include="Content\less\bootstrap.less" />
     <Content Include="Content\less\alerts.less" />
     <Content Include="Content\less\accordion.less" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\niccom.less" />
@@ -420,6 +422,8 @@
     <Content Include="Views\Home\_Login.cshtml" />
     <Content Include="Views\Home\_Register.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PCServis.cshtml" />
+    <Content Include="Views\Home\BookmarksApp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
