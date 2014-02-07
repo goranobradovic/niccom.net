@@ -86,7 +86,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\bookmarks.js" />
+    <Content Include="app\controllers\weather.js" />
+    <Content Include="app\controllers\home.js" />
+    <Content Include="app\controllers\loading.js" />
+    <Content Include="app\layout\bookmarks.html" />
     <Content Include="app\layout\shell.html" />
+    <Content Include="app\services\bookmarks.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -52,9 +52,9 @@
     </style>
 </head>
 <body>
-    <div>
-        <div data-ng-include="'@Url.Content("~/app/layout/shell.html")'"></div>
-        <div id="splash-page" data-ng-show="true" data-ng-controller="HomeCtrl">
+    <div data-ng-controller="LoadingCtrl">
+        <div data-ng-include="'@Url.Content("~/app/layout/shell.html")'" data-ng-show="loaded" class="container"></div>
+        <div id="splash-page" data-ng-show="!loaded">
             <div class="">
                 <h1 class="h1">
                     <img class="center-block" src="@Url.Content("~/Content/images/logo.png")" />
@@ -67,5 +67,9 @@
     <!-- Vendor Scripts -->
     @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("libs"))
     @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("app"))
+    <script type="text/javascript">
+        angular.module("app")
+            .constant("rootPath", '@Url.Content("~/")');
+    </script>
 </body>
 </html>

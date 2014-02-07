@@ -1,0 +1,12 @@
+﻿<div data-ng-controller="BookmarksCtrl" class="container-fluid" >
+    <ul data-ng-repeat="group in bookmarks.groups" class="list-unstyled">
+        <li class="col-md-2">
+            <h3>{{group.group}}</h3>
+            <ul data-ng-repeat="link in group.links" class="list-unstyled container-fluid">
+                <li class="row">
+                    <a data-ng-href="link.url">{{link.name}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
