@@ -3,7 +3,8 @@
     using Nancy;
     using Nancy.Conventions;
     using SquishIt.Framework;
-    using SquishIt.Less;
+    using SquishIt.Framework.Invalidation;
+    using SquishIt.Framework.Minifiers.JavaScript;
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
@@ -17,25 +18,52 @@
 
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("scripts", @"Scripts"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("app", @"app"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("data", @"data"));
+            nancyConventions.StaticContentsConventions.AddFile("assets/js/*.map", "scripts");
         }
 
         protected override void ApplicationStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
         {
-            base.ApplicationStartup(container, pipelines); 
+            base.ApplicationStartup(container, pipelines);
 
             Bundle.JavaScript()
-                .AddDirectory("~/Scripts", false)
-            .AsCached("libs", "~/assets/js/libs");
+                  .AddMinified("~/Scripts/angular.min.js")
+                  .AddMinified("~/Scripts/angular-animate.min.js")
+                  .AddMinified("~/Scripts/angular-cookies.min.js")
+                  .AddMinified("~/Scripts/angular-loader.min.js")
+                  .AddMinified("~/Scripts/angular-resource.min.js")
+                  .AddMinified("~/Scripts/angular-route.min.js")
+                  .AddMinified("~/Scripts/angular-sanitize.min.js")
+                  .AddMinified("~/Scripts/angular-touch.min.js")
+                  .AddMinified("~/Scripts/jquery-1.10.2.min.js")
+                  .AddMinified("~/Scripts/less-1.5.1.min.js")
+                  .AddMinified("~/Scripts/ui-bootstrap-0.10.0.min.js")
+                  .AddMinified("~/Scripts/ui-bootstrap-tpls-0.10.0.min.js")
+                  .Add("~/Scripts/loading-bar.js")
+                  .WithMinifier<JsMinMinifier>()
+                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
+                  .AsCached("libs", "~/assets/js/libs");
 
             Bundle.JavaScript()
-                .AddDirectory("~/app", true)
-            .AsCached("app", "~/assets/js/app");
+                  .Add("~/Scripts/viewport.js")
+                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
+                  .AsCached("viewport", "~/assets/js/viewport");
+
+            Bundle.JavaScript()
+                  .Add("app/app.js")
+                  .AddDirectory("~/app")
+                  .WithMinifier<JsMinMinifier>()
+                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
+                  .AsCached("app", "~/assets/js/app");
 
             Bundle.Css()
-                  .Add("~/content/bootstrap.css")
-                  .Add("~/content/bootstrap-theme.css")
+                  .Add("~/content/angular.css")
+                  .Add("~/content/bootstrap.min.css")
+                  .Add("~/content/bootstrap-theme.min.css")
                   .Add("~/content/loading-bar.css")
-                  .AsCached("bootstrap", "~/assets/css/bootstrap");
+                  .Add("~/content/site.css")
+                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
+                  .AsCached("styles", "~/assets/css/styles");
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿angular.module('app')
-    .controller('LoadingCtrl', function ($scope, $http, $timeout, cfpLoadingBar) {
+    .controller('LoadingCtrl', ['$scope', '$timeout', 'cfpLoadingBar', '$route', function ($scope, $timeout, cfpLoadingBar, $route) {
 
         $scope.start = function () {
             cfpLoadingBar.start();
@@ -13,22 +13,16 @@
 
         function load() {
             $timeout(function () {
-                $scope.loading = $scope.loading + 5;
+                $scope.loading = $scope.loading + 10;
                 if ($scope.loading < 200) {
                     load();
                 } else {
                     $scope.loaded = true;
+
+                    $route.reload();
                 }
             }, 50);
         }
 
         load();
-
-
-        //$timeout(function() {
-        //    $scope.start();
-        //}, 150);
-        //$timeout(function() {
-        //    $scope.complete();
-        //}, 5750);
-    });
+    }]);

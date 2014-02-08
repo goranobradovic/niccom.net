@@ -1,12 +1,4 @@
 ﻿angular.module('app')
-    .controller('HomeCtrl', function ($scope, $http, $timeout, rootPath) {
+    .controller('HomeCtrl', function ($scope, $http, $timeout) {
 
-        $scope.root = rootPath;
-
-        //$timeout(function() {
-        //    $scope.start();
-        //}, 150);
-        //$timeout(function() {
-        //    $scope.complete();
-        //}, 5750);
     });

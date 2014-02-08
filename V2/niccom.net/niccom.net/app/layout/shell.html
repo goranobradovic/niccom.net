@@ -1,3 +1,5 @@
-﻿<div data-ng-controller="HomeCtrl">
-    <div data-ng-include="root+'app/layout/bookmarks.html'"></div>
+﻿<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-ng-include="'app/layout/menu.html'">
+</nav>
+<div data-ng-view></div>
+<div data-ng-controller="HomeCtrl">
 </div>

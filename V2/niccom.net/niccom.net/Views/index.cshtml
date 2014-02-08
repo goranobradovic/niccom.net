@@ -1,55 +1,15 @@
 ﻿<!DOCTYPE html>
 <html data-ng-app="app">
 <head>
-    <title data-ng-bind="title">PC SERVIS NICCOM</title>
     <meta charset="utf-8" />
+    <title data-ng-bind="title">PC SERVIS NICCOM</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-
-    <script>
-        // Must be first. IE10 mobile viewport fix
-        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
-            var msViewportStyle = document.createElement("style");
-            var mq = "@@-ms-viewport{width:auto!important}";
-            msViewportStyle.appendChild(document.createTextNode(mq));
-            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-        }
+    <base href="@Url.Content("~/")"/>
+    @Html.Raw(Bundle.Css().RenderCachedAssetTag("styles"))
+    <script type="text/javascript">
+        @Html.Raw(Bundle.JavaScript().RenderCached("viewport"))
     </script>
-    <style>
-        .ng-hide {
-            display: none!important;
-        }
-    </style>
-    @Html.Raw(Bundle.Css().RenderCachedAssetTag("bootstrap"))
-    <style type="text/css">
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
-        .ng-cloak, .x-ng-cloak,
-        .ng-hide {
-            display: none !important;
-        }
-
-        ng\:form {
-            display: block;
-        }
-
-        /* The styles below ensure that the CSS transition will ALWAYS
- * animate and close. A nasty bug occurs with CSS transitions where
- * when the active class isn't set, or if the active class doesn't
- * contain any styles to transition to, then, if ngAnimate is used,
- * it will appear as if the webpage is broken due to the forever hanging
- * animations. The border-spacing (!ie) and zoom (ie) CSS properties are
- * used below since they trigger a transition without making the browser
- * animate anything and they're both highly underused CSS properties */
-        .ng-animate-start {
-            border-spacing: 1px 1px;
-            -ms-zoom: 1.0001;
-        }
-
-        .ng-animate-active {
-            border-spacing: 0px 0px;
-            -ms-zoom: 1;
-        }
-    </style>
 </head>
 <body>
     <div data-ng-controller="LoadingCtrl">
@@ -67,9 +27,5 @@
     <!-- Vendor Scripts -->
     @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("libs"))
     @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("app"))
-    <script type="text/javascript">
-        angular.module("app")
-            .constant("rootPath", '@Url.Content("~/")');
-    </script>
 </body>
 </html>

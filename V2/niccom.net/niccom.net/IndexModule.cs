@@ -8,7 +8,8 @@
         {
             Get["/"] = parameters =>
             {
-                return View["index"];
+                return View["index"]
+                    .WithHeader("Content-Type", "text/html; charset=utf-8");
             };
         }
     }
