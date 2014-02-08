@@ -27,6 +27,7 @@
             base.ApplicationStartup(container, pipelines);
 
             Bundle.JavaScript()
+                  .AddMinified("~/Scripts/jquery-1.10.2.min.js")
                   .AddMinified("~/Scripts/angular.min.js")
                   .AddMinified("~/Scripts/angular-animate.min.js")
                   .AddMinified("~/Scripts/angular-cookies.min.js")
@@ -35,10 +36,12 @@
                   .AddMinified("~/Scripts/angular-route.min.js")
                   .AddMinified("~/Scripts/angular-sanitize.min.js")
                   .AddMinified("~/Scripts/angular-touch.min.js")
-                  .AddMinified("~/Scripts/jquery-1.10.2.min.js")
                   .AddMinified("~/Scripts/less-1.5.1.min.js")
                   .AddMinified("~/Scripts/ui-bootstrap-0.10.0.min.js")
                   .AddMinified("~/Scripts/ui-bootstrap-tpls-0.10.0.min.js")
+                  .AddMinified("~/Scripts/imagesloaded.pkgd.js")
+                  .AddMinified("~/Scripts/masonry.pkgd.min.js")
+                  .AddMinified("~/Scripts/angular-masonry.js")
                   .Add("~/Scripts/loading-bar.js")
                   .WithMinifier<JsMinMinifier>()
                   .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())

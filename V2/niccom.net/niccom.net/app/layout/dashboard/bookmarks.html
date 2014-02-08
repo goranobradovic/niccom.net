@@ -1,12 +1,2 @@
-﻿<div data-ng-controller="BookmarksCtrl" class="container-fluid" >
-    <ul data-ng-repeat="group in bookmarks.groups" class="list-unstyled">
-        <li class="col-md-2">
-            <h3>{{group.group}}</h3>
-            <ul data-ng-repeat="link in group.links" class="list-unstyled container-fluid">
-                <li class="row">
-                    <a data-ng-href="http://{{link.url}}">{{link.name}}</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+﻿<div masonry='{"gutter": 0, "isOriginTop":true, "transitionDuration": "0.4s" }' data-ng-controller="BookmarksCtrl" data-ng-include="'app/layout/partials/bookmarks-group.html'" class="bookmarks-page center-block">
 </div>

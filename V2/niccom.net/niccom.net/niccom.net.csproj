@@ -126,7 +126,6 @@
     <Content Include="Content\nancy-logo.png" />
     <Content Include="Content\site.css" />
     <Content Include="data\bookmarks.js" />
-    <Content Include="data\favorites.js" />
     <Content Include="data\dashboard.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\angular-animate.js" />
@@ -135,7 +134,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\niccom-staging.pubxml" />
     <None Include="Scripts\unused\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\angular-masonry.js" />
+    <Content Include="Scripts\angular-masonry.min.js" />
+    <Content Include="Scripts\imagesloaded.pkgd.js" />
     <Content Include="Scripts\loading-bar.js" />
+    <Content Include="Scripts\masonry.pkgd.min.js" />
     <Content Include="Scripts\unused\bootstrap.js" />
     <Content Include="Scripts\unused\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -1,9 +1,52 @@
-﻿body {
-    padding-top: 70px;
+﻿
+.bookmarks-page {
+    width: 95%;
+}
+
+.bookmarks-group {
+    width: 180px;
+    height: 100px;
+    display: block;
+    vertical-align: top;
+    border: 1px ridge silver;
+}
+
+    .bookmarks-group.x2 {
+        min-height: 200px;
+    }
+    .bookmarks-group.x3 {
+        min-height: 300px;
+    }
+    .bookmarks-group.x4 {
+        min-height: 400px;
+    }
+
+    .bookmarks-group h3 {
+        padding: 5px;
+        margin: 0;
+        border-bottom: 1px ridge silver;
+    }
+
+    .bookmarks-group .bookmarks {
+        padding: 5px 10px;
+    }
+
+body {
+    padding-top: 60px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 110px;
+    }
+
+    .bookmarks-page {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
     body {
-        padding-top: 140px;
+        padding-top: 240px;
     }
 }

@@ -1,5 +1,3 @@
-﻿<div data-ng-controller="BookmarksCtrl" class="container-fluid">
-    <ul data-ng-repeat="group in bookmarks.favorites" class="list-unstyled" data-ng-include="'app/layout/partials/bookmarks-group.html'">
-        
-    </ul>
+﻿<div masonry='{"gutter": 200, "isOriginTop":true}' data-ng-controller="BookmarksCtrl" data-ng-include="'app/layout/partials/bookmarks-group.html'" ng-init="groupName = 'favorites'">
 </div>
+{{viewParam}}

@@ -4,7 +4,7 @@
         {
             "group": "Ženski Kutak",
             "links": [
-                { "url": "#banjaluka", "name": "Banja Luka" },
+                { "url": "#bookmarks/banjaluka", "name": "Banja Luka" },
                 { "url": "http://www.test2.com", "name": "Test", "favicon": "http://www.niccom.net/favicon.ico" }
             ]
         },

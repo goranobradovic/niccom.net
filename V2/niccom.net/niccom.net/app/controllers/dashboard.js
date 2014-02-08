@@ -1,12 +1,11 @@
 ﻿angular.module('app')
-    .controller('DashboardCtrl', ['$scope', 'dashboard', '$routeParams', function ($scope, dashboard, $routeParams) {
+    .controller('DashboardCtrl', ['$scope', 'dashboard', '$routeParams', '$route', function ($scope, dashboard, $routeParams, $route) {
         $scope.bookmarks = [];
         dashboard.get()
             .success(function (data) {
                 $scope.dashboard = data;
             });
-        $scope.viewName = $routeParams.viewName;
-        $scope.currentViewIs = function(viewName) {
-            return viewName == $routeParams.viewName;
+        $scope.currentViewIs = function (menuItem) {
+            return menuItem.type == $routeParams.group && menuItem.name == $routeParams.viewName;
         };
     }]);

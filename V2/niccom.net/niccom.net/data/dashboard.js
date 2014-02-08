@@ -1,7 +1,7 @@
 ﻿{
     "menu": [
-        { "name": "favorites", "title":"Favorites" },
-        { "name": "vijesti", "title":"Vijesti" },
-        { "name": "banjaluka", "title":"Banja Luka" }
+        { "name": "bookmarks", "type":"favorites", "title":"Favorites" },
+        { "name": "bookmarks", "type":"vijesti", "title":"Vijesti" },
+        { "name": "bookmarks", "type":"banjaluka", "title":"Banja Luka" }
     ]
 }
