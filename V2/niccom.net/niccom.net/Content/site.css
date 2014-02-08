@@ -1,6 +1,5 @@
 ﻿
 .bookmarks-page {
-    width: 95%;
 }
 
 .bookmarks-group {
@@ -38,10 +37,6 @@ body {
 @media (max-width: 991px) {
     body {
         padding-top: 110px;
-    }
-
-    .bookmarks-page {
-        width: 100%;
     }
 }
 
