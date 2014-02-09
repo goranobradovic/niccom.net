@@ -32,6 +32,10 @@
         min-height: 400px;
     }
 
+    .bookmarks-group.x5 {
+        min-height: 500px;
+    }
+
     .bookmarks-group h3 {
         padding: 5px;
         margin: 0;

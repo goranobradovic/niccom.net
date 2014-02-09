@@ -25,12 +25,12 @@
                 }
             }
             $timeout(startAcquireOfFavicons, 1);
-            $timeout(startAcquireOfFavicons, 2);
-            $timeout(startAcquireOfFavicons, 3);
+            //$timeout(startAcquireOfFavicons, 2);
+            //$timeout(startAcquireOfFavicons, 3);
         }
 
         function withoutFavicon(link) {
-            return !(link.favicon);
+            return !(link.favicon) && link.favicon != '';
         }
 
         function startAcquireOfFavicons() {
@@ -50,6 +50,7 @@
                 };
                 img.onerror = function () {
                     addDefaultFavicon(link);
+                    console.log('invalid favicon: ' + link.url);
                     processNextFavicon();
                 };
                 img.src = faviconUrl;
