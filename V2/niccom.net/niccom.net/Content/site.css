@@ -1,5 +1,15 @@
-﻿
-.bookmarks-page {
+﻿.navbar-brand .logo, .nav img, .navbar-brand .btn {
+    height: 40px;
+    margin: -10px 0;
+}
+.navbar-brand .btn img {
+    height: 35px;
+}
+.nav li a {
+    font-size: 18px;
+}
+.navbar-fixed-top .navbar {
+    margin: 0 0 5px;
 }
 
 .bookmarks-group {
@@ -13,9 +23,11 @@
     .bookmarks-group.x2 {
         min-height: 200px;
     }
+
     .bookmarks-group.x3 {
         min-height: 300px;
     }
+
     .bookmarks-group.x4 {
         min-height: 400px;
     }
@@ -30,18 +42,41 @@
         padding: 5px 10px;
     }
 
+ul.nav li.hover-dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+    ul.nav li.hover-dropdown:hover > ul.dropdown-menu .caret {
+        display: none;
+    }
+
+.nav-tabs-center > li, .nav-pills-center > li {
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    zoom: 1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs-center, .nav-pills-center {
+    text-align: center;
+}
+
+.navbar-nav-center {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
 body {
-    padding-top: 60px;
+    padding-top: 125px;
 }
 
 @media (max-width: 991px) {
-    body {
-        padding-top: 110px;
-    }
 }
 
 @media (max-width: 767px) {
     body {
-        padding-top: 240px;
+        padding-top: 60px;
     }
 }

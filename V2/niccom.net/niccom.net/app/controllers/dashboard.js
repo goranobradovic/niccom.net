@@ -1,6 +1,7 @@
 ﻿angular.module('app')
     .controller('DashboardCtrl', ['$scope', 'dashboard', '$routeParams', '$route', function ($scope, dashboard, $routeParams, $route) {
         $scope.bookmarks = [];
+        $scope.navCollapsed = false;
         dashboard.get()
             .success(function (data) {
                 $scope.dashboard = data;

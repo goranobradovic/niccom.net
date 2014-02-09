@@ -1,0 +1,24 @@
+﻿<li class="dropdown hover-dropdown" data-ng-controller="WeatherCtrl">
+    <a class="dropdown-toggle" data-toggle="dropdown" data-ng-if="current.bb_pojave" data-ng-attr-title="{{current.termin}}">
+        <div class="hidden-sm hidden-xs">
+            <span>Banja Luka
+                <img alt="" data-ng-src="{{'content/images/rhmzrs/' + current.bb_pojave }}" />
+                {{current.temperatura | number:1}}°C
+            </span>
+            <b class="caret"></b>
+        </div>
+        <div class="hidden-md hidden-lg visible-sm visible-xs">
+            <span>Banja Luka {{current.temperatura | number:1}}°C
+            </span>
+            <b class="caret"></b>
+        </div>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a>oblacnost {{current.oblacnost}}</a></li>
+        <li><a>vjetar {{current.smjer_vjetra}} {{current.brzina_vjetra}}</a></li>
+        <li><a>pritisak {{current.pritisak}}</a></li>
+        <li><a>vidljivost {{current.vidljivost}}</a></li>
+        <li class="divider"></li>
+        <li><a href="http://www.rhmzrs.com/" target="_blank">Izvor: RHMZRS</a></li>
+    </ul>
+</li>
