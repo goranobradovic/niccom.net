@@ -19,6 +19,7 @@
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("scripts", @"Scripts"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("app", @"app"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("data", @"data"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("content", @"content"));
             nancyConventions.StaticContentsConventions.AddFile("assets/js/*.map", "scripts");
         }
 

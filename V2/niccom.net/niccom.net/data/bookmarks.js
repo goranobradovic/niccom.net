@@ -270,7 +270,6 @@
         {
             "group": "Banke",
             "links": [
-                { "url": "http://www.volksbank-bl.ba", "name": "VolksBank" },
                 { "url": "http://www.novabanka.com", "name": "Nova Banka" },
                 { "url": "http://www.mfbanka.com", "name": "MF Banka" },
                 { "url": "http://www.hypo-alpe-adria.rs.ba", "name": "Hypo Alpe Adria" },

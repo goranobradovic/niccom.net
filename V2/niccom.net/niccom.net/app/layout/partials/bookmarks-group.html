@@ -2,7 +2,7 @@
     <h3 class="text-center panel-title"><strong>{{group.group}}</strong></h3>
     <div class="bookmarks">
         <div data-ng-repeat="link in group.links">
-            <a data-ng-href="{{link.url}}" href="#" data-ng-class="{'text-danger': link.url.indexOf('.ba')>0}" target="_blank">
+            <a data-ng-href="{{link.url}}" href="#" data-ng-class="{'text-danger': false }" target="_blank">
                 <img data-ng-src="{{link.favicon}}" style="width: 16px; height: 16px;"/>
                 {{link.name}}
             </a>
