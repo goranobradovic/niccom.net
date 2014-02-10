@@ -20,7 +20,7 @@
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("app", @"app"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("data", @"data"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("content", @"content"));
-            nancyConventions.StaticContentsConventions.AddFile("assets/js/*.map", "scripts");
+            nancyConventions.StaticContentsConventions.AddFile("favicon.ico", "content/images/favicon.ico");
         }
 
         protected override void ApplicationStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)

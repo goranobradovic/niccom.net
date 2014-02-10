@@ -2,12 +2,20 @@
     .controller('BookmarksCtrl', ['$scope', 'bookmarks', '$routeParams', '$timeout', function ($scope, bookmarks, $routeParams, $timeout) {
         $scope.bookmarks = [];
         $scope.groupName = $routeParams.group;
+        $scope.searchTerm = '';
+        $scope.$on('handleBroadcast', function () {
+            $timeout(function () {
+                $scope.searchTerm = bookmarks.searchTerm;
+            }, 1);
+        });
+        $scope.broadcastSearchTerm = function () {
+            bookmarks.broadcastSearchTerm($scope.searchTerm);
+        };
         bookmarks.get()
             .then(function (data) {
                 $scope.bookmarks = data;
                 processFavicons(data);
             });
-
 
         var linksWithMissingFavicons = [];
 
@@ -25,7 +33,7 @@
                 }
             }
             $timeout(startAcquireOfFavicons, 1);
-            //$timeout(startAcquireOfFavicons, 2);
+            $timeout(startAcquireOfFavicons, 2);
             //$timeout(startAcquireOfFavicons, 3);
         }
 

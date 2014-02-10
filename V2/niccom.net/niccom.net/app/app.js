@@ -20,4 +20,20 @@ angular.module("app", ['chieffancypants.loadingBar', 'ngAnimate', 'ui.bootstrap'
           });
 
         delete $httpProvider.defaults.headers.common["X-Requested-With"];
-    }]);
+    }])
+    .filter('filterLinks', function () {
+        return function (input, searchTerm) {
+            if (!searchTerm) return input;
+            var result = [];
+            for (var i = 0; i < input.length; i++) {
+                var group = input[i];
+                var filteredGroup = {};
+                for (var prop in group) {
+                    filteredGroup[prop] = group[prop];
+                }
+                filteredGroup.links = group.links.filter(function (link) { return link.name.indexOf(searchTerm) >= 0; });
+                if (filteredGroup.links.length > 0) result.push(filteredGroup);
+            }
+            return result;
+        };
+    });

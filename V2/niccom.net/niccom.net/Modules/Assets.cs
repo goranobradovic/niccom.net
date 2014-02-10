@@ -12,6 +12,7 @@
             : base("/assets")
         {
             Get["/js/{name}"] = parameters => CreateResponse(Bundle.JavaScript().RenderCached((string)parameters.name), Configuration.Instance.JavascriptMimeType);
+            Get["/js/{name}.map"] = parameters => CreateResponse(File.ReadAllText(Path.Combine("/Scripts", parameters.name)), Configuration.Instance.JavascriptMimeType);
 
             Get["/css/{name}"] = parameters => CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
         }
@@ -28,7 +29,7 @@
 #if debug
                 .WithHeader("Cache-Control", "max-age=45");
 #else
-                .WithHeader("Cache-Control", "max-age=604800");
+.WithHeader("Cache-Control", "max-age=604800");
 #endif
             return response;
         }

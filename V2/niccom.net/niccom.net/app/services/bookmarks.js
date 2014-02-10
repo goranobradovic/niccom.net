@@ -1,12 +1,22 @@
 ﻿/// <reference path="../../Scripts/_references.js" />
 angular.module('app')
-    .factory('bookmarks', ['$http', '$q', '$cacheFactory', function ($http, $q, $cacheFactory) {
-        return {
+    .factory('bookmarks', ['$http', '$q', '$cacheFactory', '$rootScope', function ($http, $q, $cacheFactory, $rootScope) {
+        var service = {
             get: function () {
                 var deferred = $q.defer();
                 loadData(deferred);
                 return deferred.promise;
-            }
+            },
+            searchTerm: ''
+        };
+
+        service.broadcastSearchTerm = function (searchTerm) {
+            service.searchTerm = searchTerm;
+            $rootScope.$broadcast('handleBroadcast');
+        };
+
+        service.broadcastItem = function () {
+            $rootScope.$broadcast('handleBroadcast');
         };
 
         function loadData(deferred) {
@@ -21,5 +31,7 @@ angular.module('app')
                 });
             }
         }
+
+        return service;
     }]);
 

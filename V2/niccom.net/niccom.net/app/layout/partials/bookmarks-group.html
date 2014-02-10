@@ -1,9 +1,9 @@
-﻿<div masonry-brick data-ng-repeat="group in bookmarks[groupName]" class="masonry-brick bookmarks-group" data-ng-class="{x2: group.links.length > 3, x3: group.links.length > 8, x4: group.links.length > 13, x5: group.links.length > 18 }">
+﻿<div masonry-brick data-ng-repeat="group in (groups = bookmarks[groupName])" data-ng-show="filteredLinks.length" class="masonry-brick bookmarks-group" data-ng-class="{x2: group.links.length > 3, x3: group.links.length > 8, x4: group.links.length > 13, x5: group.links.length > 18 }">
     <h3 class="text-center panel-title"><strong>{{group.group}}</strong></h3>
     <div class="bookmarks">
-        <div data-ng-repeat="link in group.links">
+        <div data-ng-repeat="link in (filteredLinks = (group.links | filter:searchTerm))">
             <a data-ng-href="{{link.url}}" href="#" data-ng-class="{'text-danger': false }" target="_blank">
-                <img data-ng-src="{{link.favicon}}" style="width: 16px; height: 16px;"/>
+                <img data-ng-src="{{link.favicon}}" style="width: 16px; height: 16px;" />
                 {{link.name}}
             </a>
         </div>
