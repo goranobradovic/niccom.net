@@ -20,7 +20,7 @@
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("app", @"app"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("data", @"data"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("content", @"content"));
-            nancyConventions.StaticContentsConventions.AddFile("favicon.ico", "content/images/favicon.ico");
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddFile("favicon.ico", "content/images/favicon.ico"));
         }
 
         protected override void ApplicationStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
@@ -50,13 +50,16 @@
 
             Bundle.JavaScript()
                   .Add("~/Scripts/viewport.js")
-                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
                   .AsCached("viewport", "~/assets/js/viewport");
+
+            Bundle.JavaScript()
+                  .Add("~/Scripts/ga.js")
+                  .AsCached("ga", "~/assets/js/ga");
 
             Bundle.JavaScript()
                   .Add("app/app.js")
                   .AddDirectory("~/app")
-                  .WithMinifier<JsMinMinifier>()
+                  .WithMinifier<YuiMinifier>()
                   .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
                   .AsCached("app", "~/assets/js/app");
 

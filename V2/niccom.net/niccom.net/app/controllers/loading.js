@@ -13,8 +13,8 @@
 
         function load() {
             $timeout(function () {
-                $scope.loading = $scope.loading + 10;
-                if ($scope.loading < 200) {
+                $scope.loading = $scope.loading + 20;
+                if ($scope.loading < 300) {
                     load();
                 } else {
                     $scope.loaded = true;

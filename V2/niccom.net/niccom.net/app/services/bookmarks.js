@@ -15,10 +15,6 @@ angular.module('app')
             $rootScope.$broadcast('handleBroadcast');
         };
 
-        service.broadcastItem = function () {
-            $rootScope.$broadcast('handleBroadcast');
-        };
-
         function loadData(deferred) {
             var cache = $cacheFactory.get('bookmarks') || $cacheFactory('bookmarks');
             var cachedData = cache.get('bookmarks');

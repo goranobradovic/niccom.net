@@ -114,6 +114,7 @@
     <Content Include="Content\images\bing.png" />
     <Content Include="Content\images\bing2.png" />
     <Content Include="Content\images\bookmark.png" />
+    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\google.png" />
     <Content Include="Content\images\google2.png" />
     <Content Include="Content\images\info.gif" />
@@ -363,6 +364,16 @@
     <Content Include="Content\images\rhmzrs\ikone\bez_pojava\noc\34.png" />
     <Content Include="Content\images\rhmzrs\ikone\logo.png" />
     <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\22.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\dan\28.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\dan\30.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\dan\32.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\dan\33.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\dan\34.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\noc\28.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\noc\30.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\noc\32.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\noc\33.png" />
+    <Content Include="Content\images\rhmzrs\ikone\magla_nev_nebo_43_45_47_49\noc\34.png" />
     <Content Include="Content\images\rhmzrs\ikone\magla_vid_nebo_41_42_44_46_48\dan\28.png" />
     <Content Include="Content\images\rhmzrs\ikone\magla_vid_nebo_41_42_44_46_48\dan\30.png" />
     <Content Include="Content\images\rhmzrs\ikone\magla_vid_nebo_41_42_44_46_48\dan\32.png" />
@@ -392,6 +403,7 @@
     <None Include="Scripts\unused\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-masonry.js" />
     <Content Include="Scripts\angular-masonry.min.js" />
+    <Content Include="Scripts\ga.js" />
     <Content Include="Scripts\imagesloaded.pkgd.js" />
     <Content Include="Scripts\loading-bar.js" />
     <Content Include="Scripts\masonry.pkgd.min.js" />

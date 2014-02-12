@@ -3,6 +3,7 @@
         $scope.bookmarks = [];
         $scope.groupName = $routeParams.group;
         $scope.searchTerm = '';
+        $scope.filteredLinks = [];
         $scope.$on('handleBroadcast', function () {
             $timeout(function () {
                 $scope.searchTerm = bookmarks.searchTerm;
@@ -10,6 +11,12 @@
         });
         $scope.broadcastSearchTerm = function () {
             bookmarks.broadcastSearchTerm($scope.searchTerm);
+        };
+        $scope.resetSearch = function () {
+            $timeout(function () {
+                $scope.searchTerm = '';
+                $scope.broadcastSearchTerm();
+            }, 1);
         };
         bookmarks.get()
             .then(function (data) {
