@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "niccom.net", "niccom.net\niccom.net.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app\app.csproj", "{01858BB9-1189-4FE7-ABE3-BBF0E0C57CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.tests", "app.tests\app.tests.csproj", "{5E881EA4-21A0-43A4-9B29-500F04190FAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01858BB9-1189-4FE7-ABE3-BBF0E0C57CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01858BB9-1189-4FE7-ABE3-BBF0E0C57CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01858BB9-1189-4FE7-ABE3-BBF0E0C57CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01858BB9-1189-4FE7-ABE3-BBF0E0C57CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E881EA4-21A0-43A4-9B29-500F04190FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E881EA4-21A0-43A4-9B29-500F04190FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E881EA4-21A0-43A4-9B29-500F04190FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E881EA4-21A0-43A4-9B29-500F04190FAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

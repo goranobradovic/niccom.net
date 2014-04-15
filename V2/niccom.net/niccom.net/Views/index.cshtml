@@ -5,28 +5,28 @@
     <title data-ng-bind="title">PC SERVIS NICCOM</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <base href="@Url.Content("~/")"/>
+    <base href="@Url.Content("~/")" />
     @Html.Raw(Bundle.Css().RenderCachedAssetTag("styles"))
     <script type="text/javascript">
         @Html.Raw(Bundle.JavaScript().RenderCached("viewport"))
         @Html.Raw(Bundle.JavaScript().RenderCached("ga"))
     </script>
 </head>
-<body>
-    <div data-ng-controller="LoadingCtrl">
-        <div data-ng-include="'@Url.Content("~/app/layout/shell.html")'" data-ng-show="loaded" class="container-fluid center-block"></div>
-        <div id="splash-page" data-ng-show="!loaded">
-            <div class="">
-                <h1 class="h1">
-                    <img class="center-block" src="@Url.Content("~/Content/images/logo.png")" />
-                </h1>
-                <progressbar class="progress-striped active" value="loading"></progressbar>
+    <body data-ng-controller="GlobalCtrl" ng-keydown="keyPressed($event)">
+        <div data-ng-controller="LoadingCtrl">
+            <div data-ng-include="'@Url.Content("~/app/layout/shell.html")'" data-ng-show="loaded" class="container-fluid center-block"></div>
+            <div id="splash-page" data-ng-show="!loaded">
+                <div class="">
+                    <h1 class="h1">
+                        <img class="center-block" src="@Url.Content("~/Content/images/logo.png")" />
+                    </h1>
+                    <progressbar class="progress-striped active" value="loading"></progressbar>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Vendor Scripts -->
-    @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("libs"))
-    @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("app"))
-</body>
+        <!-- Vendor Scripts -->
+        @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("libs"))
+        @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("app"))
+    </body>
 </html>

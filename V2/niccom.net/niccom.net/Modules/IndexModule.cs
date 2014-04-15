@@ -1,4 +1,4 @@
-﻿namespace niccom.net
+﻿namespace niccom.net.Modules
 {
     using Nancy;
 

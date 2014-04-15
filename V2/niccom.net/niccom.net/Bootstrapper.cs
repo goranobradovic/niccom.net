@@ -1,10 +1,15 @@
 ﻿namespace niccom.net
 {
+    using System.Collections.Generic;
+    using app.Models;
+    using app.Services;
+    using Models;
     using Nancy;
+    using Nancy.Authentication.Stateless;
+    using Nancy.Bootstrapper;
     using Nancy.Conventions;
-    using SquishIt.Framework;
-    using SquishIt.Framework.Invalidation;
-    using SquishIt.Framework.Minifiers.JavaScript;
+    using Nancy.TinyIoc;
+    using Startup;
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
@@ -12,7 +17,7 @@
         // by overriding the various methods and properties.
         // For more information https://github.com/NancyFx/Nancy/wiki/Bootstrapper
 
-        protected override void ConfigureConventions(Nancy.Conventions.NancyConventions nancyConventions)
+        protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
             base.ConfigureConventions(nancyConventions);
 
@@ -23,54 +28,43 @@
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddFile("favicon.ico", "content/images/favicon.ico"));
         }
 
-        protected override void ApplicationStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
+        protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
             base.ApplicationStartup(container, pipelines);
 
-            Bundle.JavaScript()
-                  .AddMinified("~/Scripts/jquery-1.10.2.min.js")
-                  .AddMinified("~/Scripts/angular.min.js")
-                  .AddMinified("~/Scripts/angular-animate.min.js")
-                  .AddMinified("~/Scripts/angular-cookies.min.js")
-                  .AddMinified("~/Scripts/angular-loader.min.js")
-                  .AddMinified("~/Scripts/angular-resource.min.js")
-                  .AddMinified("~/Scripts/angular-route.min.js")
-                  .AddMinified("~/Scripts/angular-sanitize.min.js")
-                  .AddMinified("~/Scripts/angular-touch.min.js")
-                  .AddMinified("~/Scripts/less-1.5.1.min.js")
-                  .AddMinified("~/Scripts/ui-bootstrap-0.10.0.min.js")
-                  .AddMinified("~/Scripts/ui-bootstrap-tpls-0.10.0.min.js")
-                  .AddMinified("~/Scripts/imagesloaded.pkgd.js")
-                  .AddMinified("~/Scripts/masonry.pkgd.min.js")
-                  .AddMinified("~/Scripts/angular-masonry.js")
-                  .Add("~/Scripts/loading-bar.js")
-                  .WithMinifier<JsMinMinifier>()
-                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
-                  .AsCached("libs", "~/assets/js/libs");
+            BundlesConfig.RegisterAllBundles();
 
-            Bundle.JavaScript()
-                  .Add("~/Scripts/viewport.js")
-                  .AsCached("viewport", "~/assets/js/viewport");
+            //container.AutoRegister(DuplicateImplementationActions.RegisterSingle);
 
-            Bundle.JavaScript()
-                  .Add("~/Scripts/ga.js")
-                  .AsCached("ga", "~/assets/js/ga");
+        }
 
-            Bundle.JavaScript()
-                  .Add("app/app.js")
-                  .AddDirectory("~/app")
-                  .WithMinifier<YuiMinifier>()
-                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
-                  .AsCached("app", "~/assets/js/app");
+        protected override void RequestStartup(TinyIoCContainer requestContainer, IPipelines pipelines, NancyContext context)
+        {
+            base.RequestStartup(requestContainer, pipelines, context);
 
-            Bundle.Css()
-                  .Add("~/content/angular.css")
-                  .Add("~/content/bootstrap.min.css")
-                  .Add("~/content/bootstrap-theme.min.css")
-                  .Add("~/content/loading-bar.css")
-                  .Add("~/content/site.css")
-                  .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
-                  .AsCached("styles", "~/assets/css/styles");
+            // At request startup we modify the request pipelines to
+            // include forms authentication - passing in our now request
+            // scoped user name mapper.
+            //
+            // The pipelines passed in here are specific to this request,
+            // so we can add/remove/update items in them as we please.
+            var loginService = requestContainer.Resolve<LoginService>();
+            var authConfiguration =
+                new StatelessAuthenticationConfiguration(c =>
+                {
+                    var apiKeyFromRequest = ((DynamicDictionaryValue)c.Request.Query.ApiKey).Value as ApiKey
+                        ?? ((DynamicDictionaryValue)c.Request.Form.ApiKey).Value as ApiKey;
+
+                    if (apiKeyFromRequest == null) return null;
+
+                    if (loginService.IsApiKeyValid(apiKeyFromRequest))
+                    {
+                        return new UserIdentity(apiKeyFromRequest.Username, new List<string>());
+                    }
+                    return null;
+                });
+
+            StatelessAuthentication.Enable(pipelines, authConfiguration);
         }
     }
 }

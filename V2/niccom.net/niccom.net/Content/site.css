@@ -88,41 +88,42 @@ body {
     padding-top: 125px;
 }
 
-.search-field {
+.form-control.search-field {
     width: 1000px;
 }
 
 @media (max-width: 1600px) {
-    .search-field {
+    .form-control.search-field {
         width: 800px;
     }
 }
 
 @media (max-width: 1400px) {
-    .search-field {
+    .form-control.search-field {
         width: 720px;
     }
 }
+
 @media (max-width: 1300px) {
-    .search-field {
+    .form-control.search-field {
         width: 600px;
     }
 }
 
 @media (max-width: 1180px) {
-    .search-field {
+    .form-control.search-field {
         width: 455px;
     }
 }
 
 @media (max-width: 1020px) {
-    .search-field {
+    .form-control.search-field {
         width: 380px;
     }
 }
 
 @media (max-width: 920px) {
-    .search-field {
+    .form-control.search-field {
         width: 265px;
     }
 }

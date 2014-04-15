@@ -1,6 +1,6 @@
 ﻿angular.module('app')
     .controller('DashboardCtrl', [
-        '$scope', 'dashboard', '$routeParams', '$rootScope', '$location', function ($scope, dashboard, $routeParams, $rootScope, $location) {
+        '$scope', 'dashboard', '$routeParams', function ($scope, dashboard, $routeParams) {
             $scope.bookmarks = [];
             $scope.navCollapsed = false;
             dashboard.get()
@@ -10,10 +10,5 @@
             $scope.currentViewIs = function (menuItem) {
                 return menuItem.type == $routeParams.group && menuItem.name == $routeParams.viewName;
             };
-
-            $rootScope.$on('$routeChangeSuccess', function () {
-                if (typeof ga == "function")
-                    ga('send', 'pageview', { 'page': $location.path() });
-            });
         }
     ]);
